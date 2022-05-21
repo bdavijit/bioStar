@@ -2,27 +2,26 @@ import React from 'react';
 import './Header.css';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
-
 const Header = () => {
       return (
             <div className=''>
-                  <div class='drawer '>
+                  <div class='drawer drawer-mobile'>
                         <input
-                              id='my-drawer'
+                              id='my-drawer-2'
                               type='checkbox'
                               class='drawer-toggle'
                         />
-                        <div class='drawer-content Haderbtn'>
+                        <div class='drawer-content flex flex-col w-20 m-1'>
                               <label
-                                    for='my-drawer'
-                                    class='btn btn-primary drawer-button'
+                                    for='my-drawer-2'
+                                    class='btn btn-primary drawer-button lg:hidden'
                               >
-                                   <GiHamburgerMenu />
+                                    <GiHamburgerMenu />
                               </label>
                         </div>
                         <div class='drawer-side'>
                               <label
-                                    for='my-drawer'
+                                    for='my-drawer-2'
                                     class='drawer-overlay'
                               ></label>
                               <ul class='menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content'>
