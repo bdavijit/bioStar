@@ -18,7 +18,7 @@ function App() {
                         }`}
                         onClick={() => setnavControl(true)}
                   >
-                        <GiHamburgerMenu />
+                        <GiHamburgerMenu className='text-white' />
                   </button>
                   <div className='MainBox MainBox_adjust'>
                         <div className={`NavBox ${navControl ? '' : 'hidden'}`}>
@@ -27,7 +27,11 @@ function App() {
                                     setnavControl={setnavControl}
                               />
                         </div>
-                        <div className='MainBody'>
+                        <div
+                              className={`MainBody ${
+                                    navControl ? 'MoveBody' : ''
+                              }`}
+                        >
                               <Routes>
                                     <Route path='/' element={<Home />}></Route>
                                     <Route

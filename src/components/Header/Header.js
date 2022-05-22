@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Header = (props) => {
       const { navControl, setnavControl } = props;
       return (
-            <section>
+            <section className='text-white'>
                   <button
                         className={`bg-red-600 p-5 `}
                         onClick={() => setnavControl(false)}
