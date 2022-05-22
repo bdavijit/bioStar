@@ -1,40 +1,26 @@
 import React from 'react';
 import './Header.css';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { FaLongArrowAltUp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = (props) => {
+      const { navControl, setnavControl } = props;
       return (
-            <div className=''>
-                  <div class='drawer drawer-mobile'>
-                        <input
-                              id='my-drawer-2'
-                              type='checkbox'
-                              class='drawer-toggle'
-                        />
-                        <div class='drawer-content flex flex-col w-20 m-1'>
-                              <label
-                                    for='my-drawer-2'
-                                    class='btn btn-primary drawer-button lg:hidden'
-                              >
-                                    <GiHamburgerMenu />
-                              </label>
-                        </div>
-                        <div class='drawer-side'>
-                              <label
-                                    for='my-drawer-2'
-                                    class='drawer-overlay'
-                              ></label>
-                              <ul class='menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content'>
-                                    <li>
-                                          <a>Sidebar Item 1</a>
-                                    </li>
-                                    <li>
-                                          <a>Sidebar Item 2</a>
-                                    </li>
-                              </ul>
-                        </div>
+            <section>
+                  <button
+                        className={`bg-red-600 p-5 `}
+                        onClick={() => setnavControl(false)}
+                  >
+                        <FaLongArrowAltUp />
+                  </button>
+                  <h1 className='text-center'>Header</h1>
+                  <div className='HeaderLinks'>
+                        <Link to='/'>Home</Link>
+                        <Link to='/Product'>Product</Link>
+                        <Link to='/Orders'>orders</Link>
+                        <Link to='/Register'>Register</Link>
                   </div>
-            </div>
+            </section>
       );
 };
 

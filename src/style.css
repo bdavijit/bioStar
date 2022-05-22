@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.MainBox{
+    display: flex;
+}
+.NavBox{
+    padding: 2%;
+}
+.MainBody{
+    padding: 2%;
+}
+

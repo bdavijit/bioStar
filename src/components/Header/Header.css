@@ -1,3 +1,9 @@
 .Haderbtn{
     margin: 10px;
 }
+
+.HeaderLinks{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
