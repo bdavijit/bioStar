@@ -1,0 +1,14 @@
+.BusinessSummaryBox{
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-gap: 3rem;
+    padding: 20px;
+    justify-items: center;
+}
+
+.BusinessMenu{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}

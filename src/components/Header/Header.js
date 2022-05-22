@@ -13,18 +13,40 @@ const Header = (props) => {
                   >
                         <FaLongArrowAltUp />
                   </button>
-                  <h1 className='text-center text-2xl'>Header</h1>
+                  <h1 className='text-center text-2xl'>Biostar</h1>
+                  <h1 className='text-center text-2xl mt-4'>Avijit Kundu</h1>
                   <div className='HeaderLinks'>
-                        <Link className='hover:underline' to='/'>
+                        <Link className='hover:underline text-vw' to='/'>
                               Home
                         </Link>
-                        <Link className='hover:underline' to='/Product'>
+                        <Link className='hover:underline text-vw' to='/Product'>
                               Product
                         </Link>
-                        <Link className='hover:underline' to='/Orders'>
+                        <Link className='hover:underline text-vw' to='/Orders'>
                               orders
                         </Link>
-                        <Link className='hover:underline' to='/Register'>
+                        <Link
+                              className='hover:underline text-vw'
+                              to='/Register'
+                        >
+                              Register
+                        </Link>
+                  </div>
+                  <h1 className='text-center text-2xl'>Main Menus</h1>
+                  <div className='HeaderLinks'>
+                        <Link className='hover:underline text-vw' to='/'>
+                              Home
+                        </Link>
+                        <Link className='hover:underline text-vw' to='/Product'>
+                              Product
+                        </Link>
+                        <Link className='hover:underline text-vw' to='/Orders'>
+                              orders
+                        </Link>
+                        <Link
+                              className='hover:underline text-vw'
+                              to='/Register'
+                        >
                               Register
                         </Link>
                   </div>

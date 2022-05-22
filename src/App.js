@@ -7,6 +7,7 @@ import Login from './components/Login/Login';
 import './style.css';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { useState } from 'react';
+import Footer from './components/Footer/Footer';
 
 function App() {
       const [navControl , setnavControl ] = useState(false);
@@ -39,6 +40,7 @@ function App() {
                                           element={<Login />}
                                     ></Route>
                               </Routes>
+                              <Footer/>
                         </div>
                   </div>
             </>

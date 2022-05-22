@@ -8,8 +8,11 @@ body{
 .Bg-my-primary{
     background-color: #ed2d34;
 }
+.my-text-color{
+    color: #ed2d34;
+}
 .NavBox{
-    padding: 2%;
+    padding: 2% 2% 0 2%;
     background-color: #ed2d34;
     /* height: 100vh; */
     /* position: sticky; */
@@ -17,8 +20,8 @@ body{
     bottom:0;
     position:fixed;
     width: 20%;
-    /* overflow-y:scroll; */
-    /* overflow-x:hidden; */
+    /* overflow-y:scroll;
+     overflow-x:hidden;  */
 }
 .MainBody{
     padding: 2%;
@@ -27,4 +30,10 @@ body{
 .MoveBody{
     margin-left: 20%;
 }
+
+
+.text-vw{
+    font-size: 1.2vw;
+}
+
 
