@@ -1,0 +1,14 @@
+.PartsBox {
+
+      display: grid;
+      grid-template-columns: 0.1fr 1fr 0.1fr;
+      justify-items: center;
+      align-items: center;
+
+      max-width: 900px;
+      margin: auto;
+}
+
+/* .partsCard{
+      display: ;
+} */

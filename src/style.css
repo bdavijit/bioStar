@@ -1,39 +1,41 @@
-body{
-    margin: 0;
-    padding: 0;
+
+body {
+      margin: 0;
+      padding: 0;
+
+
 }
-.MainBox{
-    display: flex;
+.MainBox {
+      display: flex;
 }
-.Bg-my-primary{
-    background-color: #ed2d34;
+.Bg-my-primary {
+      background-color: #ed2d34;
 }
-.my-text-color{
-    color: #ed2d34;
+.my-text-color {
+      color: #ed2d34;
 }
-.NavBox{
-    padding: 2% 2% 0 2%;
-    background-color: #ed2d34;
-    /* height: 100vh; */
-    /* position: sticky; */
-       top: 0;
-    bottom:0;
-    position:fixed;
-    width: 20%;
-    /* overflow-y:scroll;
+.NavBox {
+      padding: 2% 2% 0 2%;
+      background-color: #ed2d34;
+      /* height: 100vh; */
+      /* position: sticky; */
+      top: 0;
+      bottom: 0;
+      position: fixed;
+      width: 20%;
+      /* overflow-y:scroll;
      overflow-x:hidden;  */
 }
-.MainBody{
-    padding: 2%;
+.MainBody {
+      padding: 2%;
+      
 }
 
-.MoveBody{
-    margin-left: 20%;
+.MoveBody {
+      margin-left: 20%;
+
 }
 
-
-.text-vw{
-    font-size: 1.2vw;
+.text-vw {
+      font-size: 1.2vw;
 }
-
-
