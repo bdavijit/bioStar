@@ -8,17 +8,25 @@ const Header = (props) => {
       return (
             <section className='text-white'>
                   <button
-                        className={`bg-red-600 p-5 `}
+                        className={`Bg-my-primary p-5 `}
                         onClick={() => setnavControl(false)}
                   >
                         <FaLongArrowAltUp />
                   </button>
-                  <h1 className='text-center'>Header</h1>
+                  <h1 className='text-center text-2xl'>Header</h1>
                   <div className='HeaderLinks'>
-                        <Link to='/'>Home</Link>
-                        <Link to='/Product'>Product</Link>
-                        <Link to='/Orders'>orders</Link>
-                        <Link to='/Register'>Register</Link>
+                        <Link className='hover:underline' to='/'>
+                              Home
+                        </Link>
+                        <Link className='hover:underline' to='/Product'>
+                              Product
+                        </Link>
+                        <Link className='hover:underline' to='/Orders'>
+                              orders
+                        </Link>
+                        <Link className='hover:underline' to='/Register'>
+                              Register
+                        </Link>
                   </div>
             </section>
       );

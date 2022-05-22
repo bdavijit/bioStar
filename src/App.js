@@ -13,7 +13,7 @@ function App() {
       return (
             <>
                   <button
-                        className={`bg-red-600 m-3 p-5 ${
+                        className={`Bg-my-primary m-3 p-5 ${
                               navControl ? 'hidden' : ''
                         }`}
                         onClick={() => setnavControl(true)}

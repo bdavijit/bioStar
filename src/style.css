@@ -5,9 +5,12 @@ body{
 .MainBox{
     display: flex;
 }
+.Bg-my-primary{
+    background-color: #ed2d34;
+}
 .NavBox{
     padding: 2%;
-    background-color: brown;
+    background-color: #ed2d34;
     /* height: 100vh; */
     /* position: sticky; */
        top: 0;
