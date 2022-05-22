@@ -3,45 +3,54 @@ import './Parts.css';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 
 const Parts = () => {
-      const [page, setPage] = useState(0);
-      const [size, setSize] = useState(1);
+      let [index, setindex] = useState(0);
       const [products, setProducts] = useState([]);
+      const [left, setleft] = useState(false);
+      const [Right, setRight] = useState(false);
 
       useEffect(() => {
-            fetch(`http://localhost:5001/products?page=${page}&size=${size}`)
+            fetch(`http://localhost:5001/products?page=0&size=6`)
                   .then((res) => res.json())
                   .then((data) => setProducts(data));
-      }, [page, size]);
+      }, []);
 
-      const HandelPage =(btnName)=>{
-            if(page >= 0){
-                  if (btnName === 'next') {
-                        setPage(page + 1);
-                  } else{
-                        setPage(page - 1);
+      const HandelIndex = (btnName) => {
+            if (btnName === 'next') {
+                  if (index === 5) {
+                        setRight(true);
+                  } else {
+                        setindex(index + 1);
+                        setleft(false);
                   }
-                  console.log("ok");
+            } else {
+                  if (index === 0) {
+                        setleft(true);
+                  } else {
+                        setindex(index - 1);
+                        setRight(false);
+                  }
             }
-      }
+      };
 
       return (
             <section className='PartsBox'>
                   <button
-                        class='btn btn-circle btn-outline'
-                        onClick={() => HandelPage('previous')}
+                        class={`btn btn-circle btn-outline `}
+                        onClick={() => HandelIndex('previous')}
+                        disabled={left}
                   >
                         <FaAngleLeft />
                   </button>
                   <div>
                         <div class=''>
                               <div>
-                                    <img src={products[0]?.image} alt='' />
+                                    <img src={products[index]?.image} alt='' />
                                     <div>
                                           <h1 class='text-5xl font-bold'>
-                                                {products[0]?.name}
+                                                {products[index]?.name}
                                           </h1>
                                           <p class='py-6'>
-                                                {products[0]?.description}
+                                                {products[index]?.description}
                                           </p>
                                           <button class='btn btn-primary'>
                                                 Open
@@ -52,7 +61,8 @@ const Parts = () => {
                   </div>
                   <button
                         class='btn btn-circle btn-outline'
-                        onClick={() => HandelPage('next')}
+                        onClick={() => HandelIndex('next')}
+                        disabled={Right}
                   >
                         <FaAngleRight />
                   </button>
