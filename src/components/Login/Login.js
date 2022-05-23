@@ -55,6 +55,39 @@ const Login2 = () => {
                                     )}
                               </label>
                         </div>
+                        <div class='form-control w-full max-w-xs'>
+                              <label class='label'>
+                                    <span class='label-text'>password</span>
+                              </label>
+                              <input
+                                    type='password'
+                                    placeholder='Type here'
+                                    class='input input-bordered w-full max-w-xs'
+                                    {...register('password', {
+                                          required: {
+                                                value: true,
+                                                message: 'password is required',
+                                          },
+                                          pattern: {
+                                                value: /(?=.*[!@#$%^&*])/,
+                                                message: 'At least one special character',
+                                          },
+                                    })}
+                              />
+                              <label class='label'>
+                                    {errors.password?.type === 'required' && (
+                                          <span className='label-text-alt text-red-500'>
+                                                {errors.password.message}
+                                          </span>
+                                    )}
+                                    {errors.password?.type === 'pattern' && (
+                                          <span className='label-text-alt text-red-500'>
+                                                {errors.password.message}
+                                          </span>
+                                    )}
+                              </label>
+                        </div>
+
                         <input
                               className='btn w-full max-w-xs text-white'
                               type='submit'
