@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.css';
 import { FaLongArrowAltUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+// const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
 const Header = (props) => {
       const { navControl, setnavControl } = props;
@@ -41,9 +42,9 @@ const Header = (props) => {
                         </Link>
                         <Link
                               className='hover:underline text-vw'
-                              to='/Register'
+                              to='/Login'
                         >
-                              Register
+                              Login
                         </Link>
                   </div>
                   <h1 className='text-center text-2xl'>Main Menus</h1>

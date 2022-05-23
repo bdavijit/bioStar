@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Parts.css';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Parts = () => {
       let [index, setindex] = useState(0);
@@ -53,7 +54,12 @@ const Parts = () => {
                                                 {products[index]?.description}
                                           </p>
                                           <button class='btn btn-primary'>
-                                                Open
+                                                <Link
+                                                      className=''
+                                                      to='/purchase'
+                                                >
+                                                      BuyNow
+                                                </Link>
                                           </button>
                                     </div>
                               </div>

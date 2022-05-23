@@ -1,13 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/Header/Header';
+import { useState } from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import Login2 from './components/Login/Login';
 import Login from './components/Login/Login';
 import './style.css';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { useState } from 'react';
-import Footer from './components/Footer/Footer';
 
 function App() {
       const [navControl , setnavControl ] = useState(false);
@@ -37,7 +37,7 @@ function App() {
                                     <Route path='/' element={<Home />}></Route>
                                     <Route
                                           path='/Login'
-                                          element={<Login />}
+                                          element={<Login2 />}
                                     ></Route>
                               </Routes>
                               <Footer/>
