@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import useFindProduct from '../../hook/useFindProduct';
 import useFirebase from '../../hook/useFirebase';
 import Login2 from '../Login/Login';
 
@@ -120,14 +119,14 @@ const Purchase = () => {
                                     <input
                                           type='text'
                                           placeholder='name'
-                                          class='input input-bordered input-secondary w-full max-w-xs'
+                                          class='input input-bordered input-error w-full max-w-xs'
                                           value={user?.displayName}
                                           name='name'
                                     />
                                     <input
                                           type='text'
                                           placeholder='email'
-                                          class='input input-bordered input-secondary w-full max-w-xs'
+                                          class='input input-bordered input-error w-full max-w-xs'
                                           value={user?.email}
                                           name='email'
                                     />
@@ -135,7 +134,7 @@ const Purchase = () => {
                                           type='number'
                                           placeholder='phone number'
                                           name='mobile'
-                                          class='input input-bordered input-secondary w-full max-w-xs'
+                                          class='input input-bordered input-error w-full max-w-xs'
                                     />
                                     <textarea
                                           class='textarea textarea-secondary'

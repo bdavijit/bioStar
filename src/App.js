@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import AddNewReview from './components/AddNewReview/AddNewReview';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
@@ -59,6 +60,10 @@ function App() {
                                     <Route
                                           path='/MyOrders/:email'
                                           element={<MyOrders />}
+                                    ></Route>
+                                    <Route
+                                          path='/AddNewReview'
+                                          element={<AddNewReview />}
                                     ></Route>
                               </Routes>
                               <Footer />

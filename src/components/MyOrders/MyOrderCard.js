@@ -33,9 +33,13 @@ const MyOrderCard = (props) => {
                 <p>Price : {pPrice}</p>
                 <p>quintity: {quintity}</p>
                 {!paid ? <button className='btn'>payNow</button> : 'paid'}
-                <button className='btn' onClick={() => DeleteOrder(_id)}>
-                      Delete
-                </button>
+                {!paid ? (
+                      <button className='btn' onClick={() => DeleteOrder(_id)}>
+                            Delete
+                      </button>
+                ) : (
+                      'paid'
+                )}
           </>
     );
 };

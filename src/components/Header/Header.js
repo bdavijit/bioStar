@@ -54,7 +54,7 @@ const Header = (props) => {
                               </button>
                               <Link
                                     className='hover:underline text-vw'
-                                    to='/AddAReview'
+                                    to='/AddNewReview'
                               >
                                     Add A Review
                               </Link>
