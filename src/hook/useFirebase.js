@@ -102,13 +102,33 @@ const useFirebase = () => {
                   //create user
                   createUserWithEmailAndPassword(auth, email, password)
                         .then((result) => {
-                              const user = result.user;
-                              console.log(user);
-                              setUser(user);
+                              const user2 = result.user;
+                              console.log(user2);
+                              setUser(user2);
                               setError('');
                               verifyEmail();
                               setUserName(name);
                               SetLoading(false);
+                              //add to database
+                              const Username = user2?.displayName;
+                              const email = user2?.email;
+
+                              const User = {
+                                    Username,
+                                    email,
+                              };
+                              fetch('http://localhost:5001/User', {
+                                    method: 'POST',
+                                    headers: {
+                                          'content-type': 'application/json',
+                                    },
+                                    body: JSON.stringify(User),
+                              })
+                                    .then((res) => res.json())
+                                    .then((data) => {
+                                          alert('User added successfully!!!');
+                                    });
+
                         })
                         .catch((error) => {
                               setError(error.message);
@@ -118,9 +138,34 @@ const useFirebase = () => {
 
       const singInWithGoogle = () => {
             signInWithPopup(auth, googleProvider).then((result) => {
-                  const user = result.user;
-                  setUser(user);
-                  console.log(user);
+                  const user2 = result.user;
+                  setUser(user2);
+                  
+
+                  //add to database
+                  const name = user2?.displayName;
+                  const email = user2?.email;
+       
+
+                  const User = {
+                        name,
+                        email,
+
+                  };
+
+                  fetch('http://localhost:5001/User', {
+                        method: 'POST',
+                        headers: {
+                              'content-type': 'application/json',
+                        },
+                        body: JSON.stringify(User),
+                  })
+                        .then((res) => res.json())
+                        .then((data) => {
+                              alert('User added successfully!!!');
+                        });
+
+
             });
       };
 
