@@ -42,21 +42,21 @@ const Header = (props) => {
                               </Link>
                               <Link
                                     className='hover:underline text-vw'
-                                    to='/Product'
+                                    to='/MyOrders'
                               >
-                                    Product
+                                    My Orders
                               </Link>
                               <Link
                                     className='hover:underline text-vw'
-                                    to='/Orders'
+                                    to='/AddAReview'
                               >
-                                    orders
+                                    Add A Review
                               </Link>
                               <Link
                                     className='hover:underline text-vw'
-                                    to='/Login'
+                                    to='/MyProfile'
                               >
-                                    Login
+                                    My Profile1
                               </Link>
                               <button onClick={handleSignOut}>signout</button>
                         </div>

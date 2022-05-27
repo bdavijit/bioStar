@@ -11,8 +11,8 @@ import {
       updateProfile
 } from 'firebase/auth';
 import { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+  import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 import app from '../firebase.init';
 
 const auth = getAuth(app);
