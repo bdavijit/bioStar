@@ -11,6 +11,7 @@ const Signup = () => {
             setName,
             setEmail,
             handleFormSubmit,
+            handleSignOut,
       } = useFirebase();
       //hook form
       const {
@@ -21,6 +22,7 @@ const Signup = () => {
 
       //submit
       const onSubmit = (data) => {
+            handleSignOut();
             console.log(data);
             setName(data.Name);
             setEmail(data.email);

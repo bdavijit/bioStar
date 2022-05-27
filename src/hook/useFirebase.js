@@ -29,11 +29,11 @@ const useFirebase = () => {
       const [loading, SetLoading] = useState(false);
 
       //update name
-      const setUserName = () => {
-            console.log('ok');
+      const setUserName = (username) => {
+            console.log('111ok');
 
             updateProfile(auth.currentUser, {
-                  displayName: name,
+                  displayName: username,
             })
                   .then(() => {
                         console.log('updating name');
@@ -83,16 +83,8 @@ const useFirebase = () => {
       };
 
       const handleFormSubmit = () => {
-            // event.preventDefault();
+  
             SetLoading(true);
-
-            // // check Password Should contain at least one special character
-            // if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
-            //       setError(
-            //             'Password Should contain at least one special character'
-            //       );
-            //       return;
-            // }
 
             if (registered) {
                   signInWithEmailAndPassword(auth, email, password)
@@ -115,7 +107,7 @@ const useFirebase = () => {
                               setUser(user);
                               setError('');
                               verifyEmail();
-                              setUserName();
+                              setUserName(name);
                               SetLoading(false);
                         })
                         .catch((error) => {
