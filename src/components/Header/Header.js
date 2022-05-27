@@ -56,7 +56,7 @@ const Header = (props) => {
                                     className='hover:underline text-vw'
                                     to='/MyProfile'
                               >
-                                    My Profile1
+                                    My Profile
                               </Link>
                               <button onClick={handleSignOut}>signout</button>
                         </div>
