@@ -1,4 +1,5 @@
 import React from 'react';
+import './AddAProduct.css';
 
 const AddAProduct = () => {
       const AddProduct = (event) => {
@@ -37,62 +38,64 @@ const AddAProduct = () => {
                   });
       };
       return (
-            <>
+            <section>
                   <form onSubmit={AddProduct}>
-                        <input
-                              type='text'
-                              placeholder='name'
-                              class='input input-bordered input-error w-full max-w-xs'
-                              name='name'
-                        />
-                        <input
-                              type='text'
-                              placeholder='image'
-                              class='input input-bordered input-error w-full max-w-xs'
-                              name='image'
-                        />
-                        <input
-                              type='number'
-                              placeholder='minimumOrder'
-                              class='input input-bordered input-error w-full max-w-xs'
-                              name='minimumOrder'
-                        />
-                        <input
-                              type='number'
-                              placeholder='price'
-                              class='input input-bordered input-error w-full max-w-xs'
-                              name='price'
-                        />
-                        <input
-                              type='number'
-                              placeholder='quantity'
-                              class='input input-bordered input-error w-full max-w-xs'
-                              name='quantity'
-                        />
-                        <input
-                              type='number'
-                              placeholder='sold'
-                              class='input input-bordered input-error w-full max-w-xs'
-                              name='sold'
-                        />
-                        <input
-                              type='text'
-                              placeholder='supplier_name'
-                              class='input input-bordered input-error w-full max-w-xs'
-                              name='supplier_name'
-                        />
-                        <textarea
-                              class='textarea textarea-error'
-                              placeholder='description'
-                              name='description'
-                        ></textarea>
-                        <br></br>
+                        <div className='AddProductCSS'>
+                              <input
+                                    type='text'
+                                    placeholder='name'
+                                    class='input m-3 input-bordered input-error w-full max-w-xs'
+                                    name='name'
+                              />
+                              <input
+                                    type='text'
+                                    placeholder='image'
+                                    class='input m-3 input-bordered input-error w-full max-w-xs'
+                                    name='image'
+                              />
+                              <input
+                                    type='number'
+                                    placeholder='minimumOrder'
+                                    class='input m-3 input-bordered input-error w-full max-w-xs'
+                                    name='minimumOrder'
+                              />
+                              <input
+                                    type='number'
+                                    placeholder='price'
+                                    class='input m-3 input-bordered input-error w-full max-w-xs'
+                                    name='price'
+                              />
+                              <input
+                                    type='number'
+                                    placeholder='quantity'
+                                    class='input m-3 input-bordered input-error w-full max-w-xs'
+                                    name='quantity'
+                              />
+                              <input
+                                    type='number'
+                                    placeholder='sold'
+                                    class='input m-3 input-bordered input-error w-full max-w-xs'
+                                    name='sold'
+                              />
+                              <input
+                                    type='text'
+                                    placeholder='supplier_name'
+                                    class='input m-3 input-bordered input-error w-full max-w-xs'
+                                    name='supplier_name'
+                              />
+                              <textarea
+                                    class='textarea  m-3 textarea-error'
+                                    placeholder='description'
+                                    name='description'
+                              ></textarea>
+                              <br></br>
 
-                        <button className='btn ' type='submit'>
-                              Add Product
-                        </button>
+                              <button className='btn m-3' type='submit'>
+                                    Add Product
+                              </button>
+                        </div>
                   </form>
-            </>
+            </section>
       );
 };
 

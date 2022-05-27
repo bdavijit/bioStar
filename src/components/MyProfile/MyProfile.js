@@ -1,5 +1,7 @@
 import React from 'react';
 import useFirebase from '../../hook/useFirebase';
+import './MyProfile.css'
+
 
 const MyProfile = () => {
       const { user } = useFirebase();
@@ -40,54 +42,49 @@ const MyProfile = () => {
 
       return (
             <>
-                  <form
-                        onSubmit={UpDateProfile}
-                        style={{
-                              display: 'flex',
-                        }}
-                  >
-                        <input
-                              type='text'
-                              placeholder='name'
-                              class='input input-bordered input-error w-full max-w-xs'
-                              value={user?.displayName}
-                              name='name'
-                        />
-                        <input
-                              type='text'
-                              placeholder='Email'
-                              class='input input-bordered input-error w-full max-w-xs'
-                              value={user?.email}
-                              name='email'
-                        />
-                        <input
-                              type='text'
-                              placeholder='city'
-                              class='input input-bordered input-error w-full max-w-xs'
-                              name='city'
-                        />
-                        <input
-                              type='text'
-                              placeholder='phone number'
-                              class='input input-bordered input-error w-full max-w-xs'
-                              name='phone_number'
-                        />
-                        <input
-                              type='text'
-                              placeholder='LinkedIn'
-                              class='input input-bordered input-error w-full max-w-xs'
-                              name='LinkedIn'
-                        />
-                        <textarea
-                              class='textarea textarea-error'
-                              placeholder='education'
-                              name='education'
-                        ></textarea>
-                        <br></br>
-
-                        <button className='btn' type='submit'>
-                              Update
-                        </button>
+                  <form onSubmit={UpDateProfile}>
+                        <div className='MyProfileBox'>
+                              <input
+                                    type='text'
+                                    placeholder='name'
+                                    class='input  input-error m-2 w-full max-w-xs'
+                                    value={user?.displayName}
+                                    name='name'
+                              />
+                              <input
+                                    type='text'
+                                    placeholder='Email'
+                                    class='input input-bordered input-error m-2 w-full max-w-xs'
+                                    value={user?.email}
+                                    name='email'
+                              />
+                              <input
+                                    type='text'
+                                    placeholder='city'
+                                    class='input input-bordered input-error m-2 w-full max-w-xs'
+                                    name='city'
+                              />
+                              <input
+                                    type='text'
+                                    placeholder='phone number'
+                                    class='input input-bordered input-error m-2 w-full max-w-xs'
+                                    name='phone_number'
+                              />
+                              <input
+                                    type='text'
+                                    placeholder='LinkedIn'
+                                    class='input input-bordered input-error m-2 w-full max-w-xs'
+                                    name='LinkedIn'
+                              />
+                              <textarea
+                                    class='textarea textarea-error'
+                                    placeholder='education'
+                                    name='education'
+                              ></textarea>
+                              <button className='btn m-2' type='submit'>
+                                    Update
+                              </button>
+                        </div>
                   </form>
             </>
       );

@@ -33,7 +33,7 @@ const Login2 = () => {
                               <input
                                     type='Email'
                                     placeholder='Type here'
-                                    className='input input-bordered w-full max-w-xs'
+                                    className='input input-error w-full max-w-xs'
                                     {...register('email', {
                                           required: {
                                                 value: true,
@@ -65,7 +65,7 @@ const Login2 = () => {
                               <input
                                     type='password'
                                     placeholder='Type here'
-                                    className='input input-bordered w-full max-w-xs'
+                                    className='input input-error w-full max-w-xs'
                                     {...register('password', {
                                           required: {
                                                 value: true,

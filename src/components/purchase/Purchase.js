@@ -4,6 +4,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useFirebase from '../../hook/useFirebase';
 import Login2 from '../Login/Login';
+import "./Purchase.css"
 
 const Purchase = () => {
       const { pId } = useParams();
@@ -89,66 +90,70 @@ const Purchase = () => {
                   {user ? (
                         <>
                               <ToastContainer />
-                              <div>
+                              <div className='PurchaseCard'>
                                     <img src={OneProduct?.image} alt='' />
-                                    <p>{OneProduct?.name}</p>
-                                    <p>{OneProduct?.description}</p>
-                                    <p>{OneProduct?.price}</p>
-                                    <p>{OneProduct?.quantity}</p>
+                                    <div className='text-center'>
+                                          {' '}
+                                          <p>{OneProduct?.name}</p>
+                                          <p>{OneProduct?.description}</p>
+                                          <p>{OneProduct?.price}</p>
+                                          <p>{OneProduct?.quantity}</p>
+                                    </div>
                               </div>
                               <br></br>
-                              <button
-                                    className='btn'
-                                    onClick={() => handelQuantity('minus')}
-                              >
-                                    -
-                              </button>
-                              <p>{MinimumOrder}</p>
-                              <button
-                                    className='btn'
-                                    onClick={() => handelQuantity('plus')}
-                              >
-                                    +
-                              </button>
-                              <form
-                                    onSubmit={placeOrder}
-                                    style={{
-                                          display: 'flex',
-                                    }}
-                              >
-                                    <input
-                                          type='text'
-                                          placeholder='name'
-                                          class='input input-bordered input-error w-full max-w-xs'
-                                          value={user?.displayName}
-                                          name='name'
-                                    />
-                                    <input
-                                          type='text'
-                                          placeholder='email'
-                                          class='input input-bordered input-error w-full max-w-xs'
-                                          value={user?.email}
-                                          name='email'
-                                    />
-                                    <input
-                                          type='number'
-                                          placeholder='phone number'
-                                          name='mobile'
-                                          class='input input-bordered input-error w-full max-w-xs'
-                                    />
-                                    <textarea
-                                          class='textarea textarea-secondary'
-                                          placeholder='Address'
-                                          name='Address'
-                                    ></textarea>
-                                    <br></br>
-
+                              <div className='PurchasebtnBox'>
                                     <button
-                                          className='btn '
-                                          type='submit'
+                                          className='btn'
+                                          onClick={() =>
+                                                handelQuantity('minus')
+                                          }
                                     >
-                                          place order
+                                          -
                                     </button>
+                                    <p>{MinimumOrder}</p>
+                                    <button
+                                          className='btn'
+                                          onClick={() => handelQuantity('plus')}
+                                    >
+                                          +
+                                    </button>
+                              </div>
+                              <form onSubmit={placeOrder}>
+                                    <div className='PurchaseBox'>
+                                          <input
+                                                type='text'
+                                                placeholder='name'
+                                                class='input input-bordered input-error w-full max-w-xs'
+                                                value={user?.displayName}
+                                                name='name'
+                                          />
+                                          <input
+                                                type='text'
+                                                placeholder='email'
+                                                class='input input-bordered input-error w-full max-w-xs'
+                                                value={user?.email}
+                                                name='email'
+                                          />
+                                          <input
+                                                type='number'
+                                                placeholder='phone number'
+                                                name='mobile'
+                                                class='input input-bordered input-error w-full max-w-xs'
+                                          />
+                                          <textarea
+                                                class='textarea textarea-error'
+                                                placeholder='Address'
+                                                name='Address'
+                                          ></textarea>
+                                          <br></br>
+
+                                          <button
+                                                className='btn '
+                                                type='submit'
+                                          >
+                                                place order
+                                          </button>
+                                    </div>
                               </form>
                         </>
                   ) : (

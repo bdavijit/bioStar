@@ -1,9 +1,21 @@
-.Haderbtn{
-    margin: 10px;
+.Haderbtn {
+      margin: 10px;
 }
 
-.HeaderLinks{
-  margin-top: 10px;
+.HeaderLinks {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+}
+
+.Biostar_Position {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.MenuBox{
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }

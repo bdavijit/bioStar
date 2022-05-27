@@ -40,7 +40,7 @@ const Signup = () => {
                               <input
                                     type='Name'
                                     placeholder='Type here'
-                                    className='input input-bordered w-full max-w-xs'
+                                    className='input input-error w-full max-w-xs'
                                     {...register('Name', {
                                           required: {
                                                 value: true,
@@ -63,7 +63,7 @@ const Signup = () => {
                               <input
                                     type='Email'
                                     placeholder='Type here'
-                                    className='input input-bordered w-full max-w-xs'
+                                    className='input input-error w-full max-w-xs'
                                     {...register('email', {
                                           required: {
                                                 value: true,
@@ -95,7 +95,7 @@ const Signup = () => {
                               <input
                                     type='password'
                                     placeholder='Type here'
-                                    className='input input-bordered w-full max-w-xs'
+                                    className='input input-error w-full max-w-xs'
                                     {...register('password', {
                                           required: {
                                                 value: true,
@@ -135,10 +135,7 @@ const Signup = () => {
                               </Link>
                         </small>
                   </p>
-                  <button
-                        className='btn '
-                        onClick={singInWithGoogle}
-                  >
+                  <button className='btn ' onClick={singInWithGoogle}>
                         google lOGIN
                   </button>
             </section>
