@@ -8,7 +8,7 @@ const ProductCard = (props) => {
         
 
          const handelBuyNow =()=>{
-                  navigate('/product/' + _id);
+                  navigate('/products/' + _id);
                   window.scrollTo(0, 0);
          }
     return (

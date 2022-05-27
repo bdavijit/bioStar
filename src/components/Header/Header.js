@@ -7,7 +7,7 @@ import './Header.css';
 const Header = (props) => {
       const { navControl, setnavControl } = props;
 
-      const { user, singInWithGoogle, handleSignOut } = useFirebase();
+      const { user, handleSignOut } = useFirebase();
       console.log(user);
       return (
             <section className='text-white'>

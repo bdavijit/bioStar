@@ -8,7 +8,7 @@ import {
       signInWithEmailAndPassword,
       signInWithPopup,
       signOut,
-      updateProfile,
+      updateProfile
 } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
