@@ -35,21 +35,34 @@ const Header = (props) => {
                   <h1 className='text-center text-2xl mt-4'>
                         {user?.displayName}
                   </h1>
-                  <div className='HeaderLinks'>
-                        <Link className='hover:underline text-vw' to='/'>
-                              Home
-                        </Link>
-                        <Link className='hover:underline text-vw' to='/Product'>
-                              Product
-                        </Link>
-                        <Link className='hover:underline text-vw' to='/Orders'>
-                              orders
-                        </Link>
-                        <Link className='hover:underline text-vw' to='/Login'>
-                              Login
-                        </Link>
-                        <button onClick={handleSignOut}>signout</button>
-                  </div>
+                  {user ? (
+                        <div className='HeaderLinks'>
+                              <Link className='hover:underline text-vw' to='/'>
+                                    Home
+                              </Link>
+                              <Link
+                                    className='hover:underline text-vw'
+                                    to='/Product'
+                              >
+                                    Product
+                              </Link>
+                              <Link
+                                    className='hover:underline text-vw'
+                                    to='/Orders'
+                              >
+                                    orders
+                              </Link>
+                              <Link
+                                    className='hover:underline text-vw'
+                                    to='/Login'
+                              >
+                                    Login
+                              </Link>
+                              <button onClick={handleSignOut}>signout</button>
+                        </div>
+                  ) : (
+                        ''
+                  )}
                   <h1 className='text-center text-2xl'>Main Menus</h1>
                   <div className='HeaderLinks'>
                         <Link className='hover:underline text-vw' to='/'>

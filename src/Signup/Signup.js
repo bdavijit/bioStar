@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import useFirebase from '../hook/useFirebase';
 
 const Signup = () => {
-
-       const { user, singInWithGoogle } = useFirebase();
+      const { user, singInWithGoogle, CreateUserByEmail } = useFirebase();
       //hook form
       const {
             register,
@@ -15,12 +14,35 @@ const Signup = () => {
       const onSubmit = (data) => {
             console.log('ok');
             console.log(data);
+            CreateUserByEmail(data.email, data.password , data.Name);
       };
-
 
       return (
             <section>
                   <form onSubmit={handleSubmit(onSubmit)}>
+                        <div className='form-control w-full max-w-xs'>
+                              <label className='label'>
+                                    <span className='label-text'>Name</span>
+                              </label>
+                              <input
+                                    type='Name'
+                                    placeholder='Type here'
+                                    className='input input-bordered w-full max-w-xs'
+                                    {...register('Name', {
+                                          required: {
+                                                value: true,
+                                                message: 'Name is required',
+                                          },
+                                    })}
+                              />
+                              <label className='label'>
+                                    {errors.Name?.type === 'required' && (
+                                          <span className='label-text-alt text-red-500'>
+                                                {errors.Name.message}
+                                          </span>
+                                    )}
+                              </label>
+                        </div>
                         <div className='form-control w-full max-w-xs'>
                               <label className='label'>
                                     <span className='label-text'>Email</span>
@@ -89,14 +111,14 @@ const Signup = () => {
                         <input
                               className='btn w-full max-w-xs text-white'
                               type='submit'
-                              value='Login'
+                              value='Registration'
                         />
                   </form>
                   <p>
                         <small>
-                              New to Biostar{' '}
-                              <Link className='text-primary' to='/signup'>
-                                    Create New Account
+                              Already have an account{' '}
+                              <Link className='text-primary' to='/Login'>
+                                    please login
                               </Link>
                         </small>
                   </p>

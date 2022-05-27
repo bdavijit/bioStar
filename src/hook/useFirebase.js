@@ -29,11 +29,11 @@ const useFirebase = () => {
       const [loading, SetLoading] = useState(false);
 
       //update name
-      const setUserName = () => {
+      const setUserName = (userName) => {
             console.log('ok');
-            
+
             updateProfile(auth.currentUser, {
-                  displayName: name,
+                  displayName: userName,
             })
                   .then(() => {
                         console.log('updating name');
@@ -80,6 +80,25 @@ const useFirebase = () => {
                   console.log('Email Verification Sent');
                   setError('Email Verification Sent');
             });
+      };
+
+      const CreateUserByEmail = ( email, password) => {
+            //create user
+            createUserWithEmailAndPassword(auth, email, password)
+                  .then((result) => {
+                        const user = result.user;
+                        console.log(user);
+                        setUser(user);
+                        setError('');
+                        verifyEmail();
+                        setUserName();
+                        SetLoading(false);
+                  })
+                  .catch((error) => {
+                        setError(error.message);
+                  });
+
+
       };
 
       const handleFormSubmit = (event) => {
@@ -158,6 +177,7 @@ const useFirebase = () => {
             registered,
             loading,
             SetLoading,
+            CreateUserByEmail,
       };
 };;
 
