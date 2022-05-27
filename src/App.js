@@ -6,7 +6,9 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login2 from './components/Login/Login';
-import Login from './components/Login/Login';
+import Signup from './Signup/Signup';
+
+
 import './style.css';
 
 function App() {
@@ -39,8 +41,12 @@ function App() {
                                           path='/Login'
                                           element={<Login2 />}
                                     ></Route>
+                                    <Route
+                                          path='/signup'
+                                          element={<Signup/>}
+                                    ></Route>
                               </Routes>
-                              <Footer/>
+                              <Footer />
                         </div>
                   </div>
             </>

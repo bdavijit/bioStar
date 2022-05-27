@@ -1,11 +1,14 @@
 import React from 'react';
-import './Header.css';
-import { FaLongArrowAltUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import useFirebase from '../../hook/useFirebase';
+import './Header.css';
 // const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
 const Header = (props) => {
       const { navControl, setnavControl } = props;
+
+      const { user, singInWithGoogle, handleSignOut } = useFirebase();
+      console.log(user);
       return (
             <section className='text-white'>
                   <button
@@ -14,22 +17,24 @@ const Header = (props) => {
                   >
                         <svg
                               xmlns='http://www.w3.org/2000/svg'
-                              class='h-6 w-6'
+                              className='h-6 w-6'
                               fill='none'
                               viewBox='0 0 24 24'
                               stroke='currentColor'
                         >
                               <path
-                                    stroke-linecap='round'
-                                    stroke-linejoin='round'
-                                    stroke-width='2'
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    strokeWidth='2'
                                     d='M6 18L18 6M6 6l12 12'
                               />
                         </svg>
                         {/* <FaLongArrowAltUp /> */}
                   </button>
                   <h1 className='text-center text-2xl'>Biostar</h1>
-                  <h1 className='text-center text-2xl mt-4'>Avijit Kundu</h1>
+                  <h1 className='text-center text-2xl mt-4'>
+                        {user?.displayName}
+                  </h1>
                   <div className='HeaderLinks'>
                         <Link className='hover:underline text-vw' to='/'>
                               Home
@@ -40,12 +45,10 @@ const Header = (props) => {
                         <Link className='hover:underline text-vw' to='/Orders'>
                               orders
                         </Link>
-                        <Link
-                              className='hover:underline text-vw'
-                              to='/Login'
-                        >
+                        <Link className='hover:underline text-vw' to='/Login'>
                               Login
                         </Link>
+                        <button onClick={handleSignOut}>signout</button>
                   </div>
                   <h1 className='text-center text-2xl'>Main Menus</h1>
                   <div className='HeaderLinks'>

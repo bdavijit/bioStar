@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './Parts.css';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import './Parts.css';
 
 const Parts = () => {
       let [index, setindex] = useState(0);
@@ -36,24 +36,24 @@ const Parts = () => {
       return (
             <section className='PartsBox'>
                   <button
-                        class={`btn btn-circle btn-outline `}
+                        className={`btn btn-circle btn-outline `}
                         onClick={() => HandelIndex('previous')}
                         disabled={left}
                   >
                         <FaAngleLeft />
                   </button>
                   <div>
-                        <div class=''>
+                        <div className=''>
                               <div>
                                     <img src={products[index]?.image} alt='' />
                                     <div>
-                                          <h1 class='text-5xl font-bold'>
+                                          <h1 className='text-5xl font-bold'>
                                                 {products[index]?.name}
                                           </h1>
-                                          <p class='py-6'>
+                                          <p className='py-6'>
                                                 {products[index]?.description}
                                           </p>
-                                          <button class='btn btn-primary'>
+                                          <button className='btn btn-primary'>
                                                 <Link
                                                       className=''
                                                       to='/purchase'
@@ -66,7 +66,7 @@ const Parts = () => {
                         </div>
                   </div>
                   <button
-                        class='btn btn-circle btn-outline'
+                        className='btn btn-circle btn-outline'
                         onClick={() => HandelIndex('next')}
                         disabled={Right}
                   >

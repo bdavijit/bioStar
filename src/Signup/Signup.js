@@ -1,25 +1,23 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hook/useFirebase';
+import useFirebase from '../hook/useFirebase';
 
-const Login2 = () => {
+const Signup = () => {
 
+       const { user, singInWithGoogle } = useFirebase();
+      //hook form
       const {
             register,
             formState: { errors },
             handleSubmit,
       } = useForm();
-          const { user,  singInWithGoogle } = useFirebase();
+      const onSubmit = (data) => {
+            console.log('ok');
+            console.log(data);
+      };
 
-      // if (user) {
-      //       console.log(user);
-      // }
-      
-      const onSubmit = (data) =>{
-            console.log("ok");
-             console.log(data)
-            };
+
       return (
             <section>
                   <form onSubmit={handleSubmit(onSubmit)}>
@@ -112,4 +110,4 @@ const Login2 = () => {
       );
 };
 
-export default Login2;
+export default Signup;

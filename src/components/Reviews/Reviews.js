@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import Reviewcard from './reviewcard';
-import './Reviews.css'
+import './Reviews.css';
 
 const Reviews = () => {
 
@@ -29,74 +29,74 @@ const Reviews = () => {
           }
 
                 {/* <div>
-                      <div class='avatar'>
-                            <div class='w-24 mask mask-squircle'>
+                      <div className='avatar'>
+                            <div className='w-24 mask mask-squircle'>
                                   <img src={reviews[1]?.image} alt='' />
                             </div>
                       </div>
                       <h1>name</h1>
-                      <div class='rating rating-sm'>
+                      <div className='rating rating-sm'>
                             <input
                                   type='radio'
                                   name='rating-6'
-                                  class='mask mask-star-2 bg-orange-400'
+                                  className='mask mask-star-2 bg-orange-400'
                             />
                             <input
                                   type='radio'
                                   name='rating-6'
-                                  class='mask mask-star-2 bg-orange-400'
+                                  className='mask mask-star-2 bg-orange-400'
                             />
                             <input
                                   type='radio'
                                   name='rating-6'
-                                  class='mask mask-star-2 bg-orange-400'
+                                  className='mask mask-star-2 bg-orange-400'
                                   checked
                             />
                             <input
                                   type='radio'
                                   name='rating-6'
-                                  class='mask mask-star-2 bg-orange-400'
+                                  className='mask mask-star-2 bg-orange-400'
                             />
                             <input
                                   type='radio'
                                   name='rating-6'
-                                  class='mask mask-star-2 bg-orange-400'
+                                  className='mask mask-star-2 bg-orange-400'
                             />
                       </div>
                 </div>
                 <div>
-                      <div class='avatar'>
-                            <div class='w-24 mask mask-squircle'>
+                      <div className='avatar'>
+                            <div className='w-24 mask mask-squircle'>
                                   <img src={reviews[2]?.image} alt='' />
                             </div>
                       </div>
                       <h1>name</h1>
-                      <div class='rating rating-sm'>
+                      <div className='rating rating-sm'>
                             <input
                                   type='radio'
                                   name='rating-6'
-                                  class='mask mask-star-2 bg-orange-400'
+                                  className='mask mask-star-2 bg-orange-400'
                             />
                             <input
                                   type='radio'
                                   name='rating-6'
-                                  class='mask mask-star-2 bg-orange-400'
+                                  className='mask mask-star-2 bg-orange-400'
                             />
                             <input
                                   type='radio'
                                   name='rating-6'
-                                  class='mask mask-star-2 bg-orange-400'
+                                  className='mask mask-star-2 bg-orange-400'
                                   checked
                             />
                             <input
                                   type='radio'
                                   name='rating-6'
-                                  class='mask mask-star-2 bg-orange-400'
+                                  className='mask mask-star-2 bg-orange-400'
                             />
                             <input
                                   type='radio'
                                   name='rating-6'
-                                  class='mask mask-star-2 bg-orange-400'
+                                  className='mask mask-star-2 bg-orange-400'
                             />
                       </div>
                 </div> */}
