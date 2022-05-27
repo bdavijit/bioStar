@@ -4,17 +4,28 @@ import { Link } from 'react-router-dom';
 import useFirebase from '../hook/useFirebase';
 
 const Signup = () => {
-      const { user, singInWithGoogle, CreateUserByEmail } = useFirebase();
+      const {
+            user,
+            singInWithGoogle,
+            setPassword,
+            setName,
+            setEmail,
+            handleFormSubmit,
+      } = useFirebase();
       //hook form
       const {
             register,
             formState: { errors },
             handleSubmit,
       } = useForm();
+
+      //submit
       const onSubmit = (data) => {
-            console.log('ok');
             console.log(data);
-            CreateUserByEmail(data.email, data.password , data.Name);
+            setName(data.Name);
+            setEmail(data.email);
+            setPassword(data.password);
+            handleFormSubmit();
       };
 
       return (

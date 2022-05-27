@@ -8,7 +8,7 @@ import {
       signInWithEmailAndPassword,
       signInWithPopup,
       signOut,
-      updateProfile
+      updateProfile,
 } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
@@ -29,11 +29,11 @@ const useFirebase = () => {
       const [loading, SetLoading] = useState(false);
 
       //update name
-      const setUserName = (userName) => {
+      const setUserName = () => {
             console.log('ok');
 
             updateProfile(auth.currentUser, {
-                  displayName: userName,
+                  displayName: name,
             })
                   .then(() => {
                         console.log('updating name');
@@ -82,36 +82,17 @@ const useFirebase = () => {
             });
       };
 
-      const CreateUserByEmail = ( email, password) => {
-            //create user
-            createUserWithEmailAndPassword(auth, email, password)
-                  .then((result) => {
-                        const user = result.user;
-                        console.log(user);
-                        setUser(user);
-                        setError('');
-                        verifyEmail();
-                        setUserName();
-                        SetLoading(false);
-                  })
-                  .catch((error) => {
-                        setError(error.message);
-                  });
-
-
-      };
-
-      const handleFormSubmit = (event) => {
-            event.preventDefault();
+      const handleFormSubmit = () => {
+            // event.preventDefault();
             SetLoading(true);
 
-            // check Password Should contain at least one special character
-            if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
-                  setError(
-                        'Password Should contain at least one special character'
-                  );
-                  return;
-            }
+            // // check Password Should contain at least one special character
+            // if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
+            //       setError(
+            //             'Password Should contain at least one special character'
+            //       );
+            //       return;
+            // }
 
             if (registered) {
                   signInWithEmailAndPassword(auth, email, password)
@@ -177,8 +158,11 @@ const useFirebase = () => {
             registered,
             loading,
             SetLoading,
-            CreateUserByEmail,
+            setName,
+            setEmail,
+            setPassword,
+            setRegistered,
       };
-};;
+};
 
 export default useFirebase;

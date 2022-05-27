@@ -80,6 +80,9 @@ const Header = (props) => {
                         >
                               Register
                         </Link>
+                        <Link className='hover:underline text-vw' to='/Login'>
+                              Login
+                        </Link>
                   </div>
             </section>
       );
