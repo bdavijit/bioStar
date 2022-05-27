@@ -71,17 +71,8 @@ const Header = (props) => {
                         <Link className='hover:underline text-vw' to='/Product'>
                               Product
                         </Link>
-                        <Link className='hover:underline text-vw' to='/Orders'>
-                              orders
-                        </Link>
-                        <Link
-                              className='hover:underline text-vw'
-                              to='/Register'
-                        >
-                              Register
-                        </Link>
                         <Link className='hover:underline text-vw' to='/Login'>
-                              Login
+                              Login/Register
                         </Link>
                   </div>
             </section>
