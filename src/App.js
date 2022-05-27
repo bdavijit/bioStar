@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login2 from './components/Login/Login';
+import MyOrders from './components/MyOrders/MyOrders';
 import Product from './components/Product/Product';
 import Purchase from './components/purchase/Purchase';
 import Signup from './Signup/Signup';
@@ -54,6 +55,10 @@ function App() {
                                     <Route
                                           path='/Products/:pId'
                                           element={<Purchase />}
+                                    ></Route>
+                                    <Route
+                                          path='/MyOrders/:email'
+                                          element={<MyOrders />}
                                     ></Route>
                               </Routes>
                               <Footer />

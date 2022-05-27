@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useFirebase from '../../hook/useFirebase';
 import './Header.css';
 // const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -9,6 +9,12 @@ const Header = (props) => {
 
       const { user, handleSignOut } = useFirebase();
       console.log(user);
+                  const navigate = useNavigate();
+
+                  const handelOrders = () => {
+                        navigate('/MyOrders/' + user.email);
+                        window.scrollTo(0, 0);
+                  };
       return (
             <section className='text-white'>
                   <button
@@ -40,12 +46,12 @@ const Header = (props) => {
                               <Link className='hover:underline text-vw' to='/'>
                                     Home
                               </Link>
-                              <Link
+                              <button
                                     className='hover:underline text-vw'
-                                    to='/MyOrders'
+                                    onClick={handelOrders}
                               >
                                     My Orders
-                              </Link>
+                              </button>
                               <Link
                                     className='hover:underline text-vw'
                                     to='/AddAReview'

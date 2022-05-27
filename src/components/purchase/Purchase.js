@@ -43,7 +43,7 @@ const Purchase = () => {
                   pPrice: OneProduct?.price,
             };
 
-            fetch('http://localhost:5001/Orders', {
+            fetch('http://localhost:5001/Order', {
                   method: 'POST',
                   headers: {
                         'content-type': 'application/json',
