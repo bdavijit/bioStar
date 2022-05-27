@@ -1,0 +1,14 @@
+.AddProductBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.AddButton{
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    justify-content: space-evenly;
+}

@@ -39,3 +39,19 @@ body {
 .text-vw {
       font-size: 1.2vw;
 }
+
+@media only screen and (max-width: 768px) {
+
+ .MoveBody {
+      margin-left: 10%;
+
+}
+.text-vw {
+      font-size: 3vw;
+}
+.NavBox {
+
+      width: 40%;
+      
+}
+}

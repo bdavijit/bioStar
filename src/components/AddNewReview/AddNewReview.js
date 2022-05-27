@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useFirebase from '../../hook/useFirebase';
+import './AddNewReview.css';
 
 const AddNewReview = () => {
       const { user } = useFirebase();
@@ -20,73 +21,76 @@ const AddNewReview = () => {
                   }
             }
       };
-       const Addreview = (event) => {
-             event.preventDefault();
-             const name = event.target.name.value;
-             const image = event.target.image.value;
-             const review = event.target.review.value;
-   
-             
+      const Addreview = (event) => {
+            event.preventDefault();
+            const name = event.target.name.value;
+            const image = event.target.image.value;
+            const review = event.target.review.value;
 
-             const reviewDate = {
-                   name,
-                   image,
-                   review,
-                   rate,
-             };
+            const reviewDate = {
+                  name,
+                  image,
+                  review,
+                  rate,
+            };
 
-             fetch('http://localhost:5001/review', {
-                   method: 'POST',
-                   headers: {
-                         'content-type': 'application/json',
-                   },
-                   body: JSON.stringify(reviewDate),
-             })
-                   .then((res) => res.json())
-                   .then((data) => {
-                         alert('review added successfully!!!');
-                         event.target.reset();
-                   });
-       };
+            fetch('http://localhost:5001/review', {
+                  method: 'POST',
+                  headers: {
+                        'content-type': 'application/json',
+                  },
+                  body: JSON.stringify(reviewDate),
+            })
+                  .then((res) => res.json())
+                  .then((data) => {
+                        alert('review added successfully!!!');
+                        event.target.reset();
+                  });
+      };
       return (
             <>
-                  <button className='btn' onClick={() => UpdateRate('minus')}>
-                        -
-                  </button>
-                  <p>{rate}</p>
-                  <button className='btn' onClick={() => UpdateRate('plus')}>
-                        +
-                  </button>
-                  <form
-                        onSubmit={Addreview}
-                        style={{
-                              display: 'flex',
-                        }}
-                  >
-                        <input
-                              type='text'
-                              placeholder='name'
-                              class='input input-bordered input-error w-full max-w-xs'
-                              value={user?.displayName}
-                              name='name'
-                        />
-                        <input
-                              type='text'
-                              placeholder='image'
-                              class='input input-bordered input-error w-full max-w-xs'
-                              value={user?.photoURL}
-                              name='image'
-                        />
-                        <textarea
-                              class='textarea textarea-error'
-                              placeholder='review'
-                              name='review'
-                        ></textarea>
-                        <br></br>
-
-                        <button className='btn ' type='submit'>
-                              Add review
+                  <div className='AddButton'>
+                        <button
+                              className='btn'
+                              onClick={() => UpdateRate('minus')}
+                        >
+                              -
                         </button>
+                        <p>{rate}</p>
+                        <button
+                              className='btn'
+                              onClick={() => UpdateRate('plus')}
+                        >
+                              +
+                        </button>
+                  </div>
+                  <form onSubmit={Addreview}>
+                        <div className='AddProductBox'>
+                              <input
+                                    type='text'
+                                    placeholder='name'
+                                    class='input m-3 input-bordered input-error w-full max-w-xs'
+                                    value={user?.displayName}
+                                    name='name'
+                              />
+                              <input
+                                    type='text'
+                                    placeholder='image'
+                                    class='input m-3 input-bordered input-error w-full max-w-xs'
+                                    value={user?.photoURL}
+                                    name='image'
+                              />
+                              <textarea
+                                    class='textarea m-3 textarea-error'
+                                    placeholder='review'
+                                    name='review'
+                              ></textarea>
+                              <br></br>
+
+                              <button className='btn ' type='submit'>
+                                    Add review
+                              </button>
+                        </div>
                   </form>
             </>
       );

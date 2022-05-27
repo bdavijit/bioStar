@@ -16,9 +16,9 @@ import MyProfile from './components/MyProfile/MyProfile';
 import Product from './components/Product/Product';
 import Purchase from './components/purchase/Purchase';
 import Signup from './Signup/Signup';
-
-
 import './style.css';
+
+
 
 function App() {
       const [navControl , setnavControl ] = useState(false);
@@ -42,7 +42,7 @@ function App() {
                         <div
                               className={`MainBody ${
                                     navControl ? 'MoveBody' : ''
-                              }`}
+                              } w-screen`}
                         >
                               <Routes>
                                     <Route path='/' element={<Home />}></Route>
