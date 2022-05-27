@@ -53,7 +53,7 @@ const Parts = () => {
                                           <p className='py-6'>
                                                 {products[index]?.description}
                                           </p>
-                                          <button className='btn btn-primary'>
+                                          <button className='btn '>
                                                 <Link
                                                       className=''
                                                       to='/purchase'

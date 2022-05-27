@@ -85,7 +85,7 @@ const MyProfile = () => {
                         ></textarea>
                         <br></br>
 
-                        <button className='btn btn-primary' type='submit'>
+                        <button className='btn' type='submit'>
                               Update
                         </button>
                   </form>

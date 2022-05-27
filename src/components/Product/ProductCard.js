@@ -17,7 +17,7 @@ const ProductCard = (props) => {
             <p>{name}</p>
             <p>{description}</p>
             <p>{price}</p>
-            <button className='btn btn-primary' onClick={handelBuyNow}>buy Now</button>
+            <button className='btn ' onClick={handelBuyNow}>buy Now</button>
         </div>
     );
 };

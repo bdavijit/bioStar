@@ -58,10 +58,10 @@ const Purchase = () => {
 
       const handelQuantity = (btnName) => {
             if (MinimumOrder === 0) {
-                  setMinimumOrder(OneProduct?.minimumOrder);
+                  setMinimumOrder(parseInt(OneProduct?.minimumOrder));
             } else if (btnName === 'plus') {
                   if (OneProduct?.quantity > MinimumOrder) {
-                        setMinimumOrder(MinimumOrder + 1);
+                        setMinimumOrder(parseInt(parseInt(MinimumOrder) + 1));
                   } else {
                         toast('Stock Out');
                   }
@@ -70,7 +70,7 @@ const Purchase = () => {
                         MinimumOrder > 0 &&
                         OneProduct.minimumOrder < MinimumOrder
                   ) {
-                        setMinimumOrder(MinimumOrder - 1);
+                        setMinimumOrder(parseInt(parseInt(MinimumOrder) - 1));
                   } else {
                         toast(
                               `MinimumOrder must be getter then ${OneProduct.minimumOrder}`
@@ -144,7 +144,7 @@ const Purchase = () => {
                                     <br></br>
 
                                     <button
-                                          className='btn btn-primary'
+                                          className='btn '
                                           type='submit'
                                     >
                                           place order

@@ -43,9 +43,6 @@ const Header = (props) => {
                   </h1>
                   {user ? (
                         <div className='HeaderLinks'>
-                              <Link className='hover:underline text-vw' to='/'>
-                                    Home
-                              </Link>
                               <button
                                     className='hover:underline text-vw'
                                     onClick={handelOrders}
@@ -64,7 +61,48 @@ const Header = (props) => {
                               >
                                     My Profile
                               </Link>
-                              <button onClick={handleSignOut}>signout</button>
+                              <button className='btn' onClick={handleSignOut}>
+                                    signout
+                              </button>
+                        </div>
+                  ) : (
+                        ''
+                  )}
+                  {user ? (
+                        <div className='HeaderLinks'>
+                              <Link
+                                    className='hover:underline text-vw'
+                                    to='/MyProfile'
+                              >
+                                    My Profile
+                              </Link>
+                              <Link
+                                    className='hover:underline text-vw'
+                                    to='/ManageAllOrders'
+                              >
+                                    Manage All Orders
+                              </Link>
+                              <Link
+                                    className='hover:underline text-vw'
+                                    to='/AddAProduct'
+                              >
+                                    Add A Product
+                              </Link>
+                              <Link
+                                    className='hover:underline text-vw'
+                                    to='/MakeAdmin'
+                              >
+                                    Make Admin
+                              </Link>
+                              <Link
+                                    className='hover:underline text-vw'
+                                    to='/ManageProducts'
+                              >
+                                    Manage Products
+                              </Link>
+                              <button className='btn' onClick={handleSignOut}>
+                                    signout
+                              </button>
                         </div>
                   ) : (
                         ''

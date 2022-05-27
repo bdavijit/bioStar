@@ -136,7 +136,7 @@ const Signup = () => {
                         </small>
                   </p>
                   <button
-                        className='btn btn-primary'
+                        className='btn '
                         onClick={singInWithGoogle}
                   >
                         google lOGIN
