@@ -1,7 +1,7 @@
 import React from 'react';
 import useProduct from '../../hook/useProduct';
-import ProductCard from './ProductCard';
 import './Product.css';
+import ProductCard from './ProductCard';
 
 const Product = () => {
       const [allProduct, setallProduct] = useProduct();
