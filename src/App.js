@@ -15,6 +15,7 @@ import MyOrders from './components/MyOrders/MyOrders';
 import MyProfile from './components/MyProfile/MyProfile';
 import Product from './components/Product/Product';
 import Purchase from './components/purchase/Purchase';
+import Updateproducts from './components/Updateproducts/Updateproducts';
 import Signup from './Signup/Signup';
 import './style.css';
 
@@ -87,8 +88,12 @@ function App() {
                                           element={<MakeAdmin />}
                                     ></Route>
                                     <Route
-                                          path='/ManageProducts'
+                                          path='/ManageProducts/:email'
                                           element={<ManageProducts />}
+                                    ></Route>
+                                    <Route
+                                          path='/Updateproducts/:pid'
+                                          element={<Updateproducts />}
                                     ></Route>
                               </Routes>
                               <Footer />

@@ -15,6 +15,10 @@ const Header = (props) => {
                         navigate('/MyOrders/' + user.email);
                         window.scrollTo(0, 0);
                   };
+                  const handleManageProducts = () => {
+                        navigate('/ManageProducts/' + user.email);
+                        window.scrollTo(0, 0);
+                  };
       return (
             <section className='text-white'>
                   <div className='Biostar_Position'>
@@ -97,12 +101,13 @@ const Header = (props) => {
                               >
                                     Make Admin
                               </Link>
-                              <Link
+                              <button
                                     className='hover:underline text-vw p-1'
-                                    to='/ManageProducts'
+                                    onClick={handleManageProducts}
                               >
                                     Manage Products
-                              </Link>
+                              </button>
+
                               <button className='btn' onClick={handleSignOut}>
                                     signout
                               </button>
