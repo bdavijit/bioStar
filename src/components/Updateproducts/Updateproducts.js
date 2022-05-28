@@ -5,22 +5,22 @@ import useFindProduct from '../../hook/useFindProduct';
 const Updateproducts = () => {
       const { pid } = useParams();
       const [OneProduct, setOneProduct] = useFindProduct(pid);
-      const Product = {
-            name: OneProduct?.name,
-            image: OneProduct?.image,
-            minimumOrder: OneProduct?.minimumOrder,
-            UserEmail: OneProduct?.UserEmail,
-            description: OneProduct?.description,
-            price: OneProduct?.price,
-            quantity: OneProduct?.quantity,
-            sold: OneProduct?.sold,
-      };
-     console.log(Product);
+
       const UpdateProduct = (event) => {
             event.preventDefault();
-            Product.price = event.target.price.value;
-            Product.quantity = event.target.quantity.value;
-            Product.sold = event.target.sold.value;
+                  const Product = {
+                        name: OneProduct?.name,
+                        image: OneProduct?.image,
+                        minimumOrder: OneProduct?.minimumOrder,
+                        UserEmail: OneProduct?.UserEmail,
+                        description: OneProduct?.description,
+                        price: event.target.price.value,
+                        quantity: event.target.quantity.value,
+                        sold: event.target.sold.value,
+                  };
+            // Product.price = event.target.price.value;
+            // Product.quantity = event.target.quantity.value;
+            // Product.sold = event.target.sold.value;
             // Product.UserEmail = OneProduct?.UserEmail;
             // Product.description = OneProduct?.description;
             
@@ -40,6 +40,7 @@ const Updateproducts = () => {
                         console.log('success', data);
                         alert(' Product update');
                         event.target.reset();
+                        window.location.reload();
             });
 
       };
@@ -48,9 +49,9 @@ const Updateproducts = () => {
             <section>
                   <h1>{OneProduct?.name}</h1>
                   <img src={OneProduct?.image} alt='' />
-                  <p>Price :{Product?.price}</p>
-                  <p>quantity: {Product?.quantity}</p>
-                  <p>sold: {Product?.sold}</p>
+                  <p>Price :{OneProduct?.price}</p>
+                  <p>quantity: {OneProduct?.quantity}</p>
+                  <p>sold: {OneProduct?.sold}</p>
                   <form onSubmit={UpdateProduct}>
                         <input
                               type='number'
@@ -77,12 +78,7 @@ const Updateproducts = () => {
                               Update
                         </button>
                   </form>
-                  <button
-                        onClick={() => window.location.reload()}
-                        className='btn'
-                  >
-                        Refresh
-                  </button>
+
             </section>
       );
 };
