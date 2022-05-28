@@ -1,5 +1,6 @@
 import {
       createUserWithEmailAndPassword,
+      getAdditionalUserInfo,
       getAuth,
       GoogleAuthProvider,
       onAuthStateChanged,
@@ -137,36 +138,39 @@ const useFirebase = () => {
       };
 
       const singInWithGoogle = () => {
-            signInWithPopup(auth, googleProvider).then((result) => {
-                  const user2 = result.user;
-                  setUser(user2);
-                  
+            signInWithPopup(auth, googleProvider)
+                  //             .then(async (result) => {
+                  //       const isFirstLogin = getAdditionalUserInfo(result).isNewUser
+                  //    }
+                  .then(async (result) => {
+                        const user2 = result.user;
+                        setUser(user2);
+                        const isFirstLogin =
+                              getAdditionalUserInfo(result).isNewUser;
 
-                  //add to database
-                  const name = user2?.displayName;
-                  const email = user2?.email;
-       
+                  if(isFirstLogin){
+                        //add to database
+                        const name = user2?.displayName;
+                        const email = user2?.email;
 
-                  const User = {
-                        name,
-                        email,
+                        const User = {
+                              name,
+                              email,
+                        };
 
-                  };
-
-                  fetch('http://localhost:5001/User', {
-                        method: 'POST',
-                        headers: {
-                              'content-type': 'application/json',
-                        },
-                        body: JSON.stringify(User),
-                  })
-                        .then((res) => res.json())
-                        .then((data) => {
-                              alert('User added successfully!!!');
-                        });
-
-
-            });
+                        fetch('http://localhost:5001/User', {
+                              method: 'POST',
+                              headers: {
+                                    'content-type': 'application/json',
+                              },
+                              body: JSON.stringify(User),
+                        })
+                              .then((res) => res.json())
+                              .then((data) => {
+                                    alert('User added successfully!!!');
+                              });
+                  }
+                  });
       };
 
       const handleSignOut = () => {

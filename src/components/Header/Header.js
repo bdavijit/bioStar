@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import useFindAdmin from '../../hook/usefindAdmin';
 import useFirebase from '../../hook/useFirebase';
 import './Header.css';
 // const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -9,16 +10,19 @@ const Header = (props) => {
 
       const { user, handleSignOut } = useFirebase();
       console.log(user);
-                  const navigate = useNavigate();
+      const [myUsers, setmyUsers] = useFindAdmin(user?.email);
+      console.log(myUsers);
 
-                  const handelOrders = () => {
-                        navigate('/MyOrders/' + user.email);
-                        window.scrollTo(0, 0);
-                  };
-                  const handleManageProducts = () => {
-                        navigate('/ManageProducts/' + user.email);
-                        window.scrollTo(0, 0);
-                  };
+      const navigate = useNavigate();
+
+      const handelOrders = () => {
+            navigate('/MyOrders/' + user.email);
+            window.scrollTo(0, 0);
+      };
+      const handleManageProducts = () => {
+            navigate('/ManageProducts/' + user.email);
+            window.scrollTo(0, 0);
+      };
       return (
             <section className='text-white'>
                   <div className='Biostar_Position'>
@@ -48,7 +52,7 @@ const Header = (props) => {
                   <h1 className='text-center text-2xl mt-4'>
                         {user?.displayName}
                   </h1>
-                  {user ? (
+                  {user && !myUsers?.role ? (
                         <div className='HeaderLinks MenuBox'>
                               <button
                                     className='hover:underline text-vw p-1'
@@ -75,7 +79,7 @@ const Header = (props) => {
                   ) : (
                         ''
                   )}
-                  {user ? (
+                  {user && myUsers?.role ? (
                         <div className='HeaderLinks MenuBox'>
                               <Link
                                     className='hover:underline text-vw p-1'

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MakeAdminCard = (props) => {
-      const { email } = props.user;
+      const { email, role } = props.user;
       const MakeAdminByEmail = (event) => {
           event.preventDefault();
             // let newUserData = { ...props.user, role: 'Admin' };
@@ -32,15 +32,20 @@ console.log(ProfileDate);
                   .then((data) => {
                         console.log('success', data);
                         alert('update');
+                        window.location.reload(false);
                   });
       };
 
       return (
             <div>
                   <p>{email}</p>
-                  <button className='btn' onClick={MakeAdminByEmail}>
-                        Make Admin
-                  </button>
+                  {role ? (
+                        ''
+                  ) : (
+                        <button className='btn' onClick={MakeAdminByEmail}>
+                              Make Admin
+                        </button>
+                  )}
             </div>
       );
 };
