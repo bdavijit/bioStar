@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import useFindMyProduct from '../../hook/useFindMyProduct';
+
 import useFirebase from '../../hook/useFirebase';
+import useProduct from '../../hook/useProduct';
 import ManageProductsCard from './ManageProductsCard';
 
 const ManageProducts = () => {
-      const { email } = useParams();
-const [MyProduct, setMyProduct] = useFindMyProduct(email);
+      // const { email } = useParams();
+
+const [allProduct] = useProduct();
 
       return (
             <>
-                  {MyProduct?.map((product) => (
+                  {allProduct?.map((product) => (
                         <ManageProductsCard
                               key={product._id}
                               product={product}

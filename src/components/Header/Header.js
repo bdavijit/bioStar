@@ -132,6 +132,12 @@ const Header = (props) => {
                         </Link>
                         <Link
                               className='hover:underline text-vw p-1'
+                              to='/MyPortfolio'
+                        >
+                              My Portfolio
+                        </Link>
+                        <Link
+                              className='hover:underline text-vw p-1'
                               to='/Login'
                         >
                               Login/Register

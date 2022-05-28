@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import AddAProduct from './components/AddAProduct/AddAProduct';
 import AddNewReview from './components/AddNewReview/AddNewReview';
+import Error from './components/Error/Error';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
@@ -11,6 +12,7 @@ import Login2 from './components/Login/Login';
 import MakeAdmin from './components/MakeAdmin/MakeAdmin';
 import ManageAllOrders from './components/ManageAllOrders/ManageAllOrders';
 import ManageProducts from './components/ManageProducts/ManageProducts';
+import MyPortfolio from './components/My Portfolio/MyPortfolio';
 import MyOrders from './components/MyOrders/MyOrders';
 import MyProfile from './components/MyProfile/MyProfile';
 import Product from './components/Product/Product';
@@ -95,6 +97,11 @@ function App() {
                                           path='/Updateproducts/:pid'
                                           element={<Updateproducts />}
                                     ></Route>
+                                    <Route
+                                          path='/MyPortfolio'
+                                          element={<MyPortfolio />}
+                                    ></Route>
+                                    <Route path='*' element={<Error />} />
                               </Routes>
                               <Footer />
                         </div>
