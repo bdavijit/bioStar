@@ -1,6 +1,6 @@
 import React from 'react';
 import useFirebase from '../../hook/useFirebase';
-import './MyProfile.css'
+import './MyProfile.css';
 
 
 const MyProfile = () => {
