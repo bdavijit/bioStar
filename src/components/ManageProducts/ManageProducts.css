@@ -1,0 +1,14 @@
+.ManageProductBox{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-gap: 3rem;
+    max-width: 1200px;
+    margin: auto;
+}
+.ManageProductCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 10px;
+
+}
