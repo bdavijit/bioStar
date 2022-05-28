@@ -24,7 +24,7 @@ const MyProfile = () => {
                   LinkedIn,
                   education,
             };
-            console.log(ProfileDate);
+            console.log(typeof ProfileDate);
             const url = `http://localhost:5001/user/${email}`;
             fetch(url, {
                   method: 'PUT',
