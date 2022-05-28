@@ -1,7 +1,9 @@
 import React from 'react';
+import useFirebase from '../../hook/useFirebase';
 import './AddAProduct.css';
 
 const AddAProduct = () => {
+      const { user } = useFirebase();
       const AddProduct = (event) => {
             event.preventDefault();
             const name = event.target.name.value;
@@ -10,7 +12,7 @@ const AddAProduct = () => {
             const price = parseInt(event.target.price.value);
             const quantity = parseInt(event.target.quantity.value);
             const sold = parseInt(event.target.sold.value);
-            const supplier_name = event.target.supplier_name.value;
+            const UserEmail = event.target.UserEmail.value;
             const description = event.target.description.value;
 
             const ProductDate = {
@@ -20,7 +22,7 @@ const AddAProduct = () => {
                   price,
                   quantity,
                   sold,
-                  supplier_name,
+                  UserEmail,
                   description,
             };
 
@@ -79,9 +81,10 @@ const AddAProduct = () => {
                               />
                               <input
                                     type='text'
-                                    placeholder='supplier_name'
+                                    placeholder='UserEmail'
+                                    value={user.email}
                                     class='input m-3 input-bordered input-error w-full max-w-xs'
-                                    name='supplier_name'
+                                    name='UserEmail'
                               />
                               <textarea
                                     class='textarea  m-3 textarea-error'
