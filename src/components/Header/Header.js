@@ -72,7 +72,10 @@ const Header = (props) => {
                               >
                                     My Profile
                               </Link>
-                              <button className='btn mt-3' onClick={handleSignOut}>
+                              <button
+                                    className='btn mt-3'
+                                    onClick={handleSignOut}
+                              >
                                     signout
                               </button>
                         </div>
@@ -112,7 +115,10 @@ const Header = (props) => {
                                     Manage Products
                               </button>
 
-                              <button className='btn' onClick={handleSignOut}>
+                              <button
+                                    className='btn mt-3'
+                                    onClick={handleSignOut}
+                              >
                                     signout
                               </button>
                         </div>
@@ -136,10 +142,7 @@ const Header = (props) => {
                         >
                               My Portfolio
                         </Link>
-                        <Link
-                              className='Hover-border text-vw p-1'
-                              to='/Login'
-                        >
+                        <Link className='Hover-border text-vw p-1' to='/Login'>
                               Login/Register
                         </Link>
                   </div>
