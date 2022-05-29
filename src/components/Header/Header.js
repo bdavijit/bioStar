@@ -142,6 +142,9 @@ const Header = (props) => {
                         >
                               My Portfolio
                         </Link>
+                        <Link className='Hover-border text-vw p-1' to='/blogs'>
+                              Blogs
+                        </Link>
                         <Link className='Hover-border text-vw p-1' to='/Login'>
                               Login/Register
                         </Link>

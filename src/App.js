@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import AddAProduct from './components/AddAProduct/AddAProduct';
 import AddNewReview from './components/AddNewReview/AddNewReview';
+import Blogs from './components/Blogs/Blogs';
 import Error from './components/Error/Error';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -101,6 +102,10 @@ function App() {
                                     <Route
                                           path='/ManageAllOrders'
                                           element={<ManageAllOrders />}
+                                    ></Route>
+                                    <Route
+                                          path='/blogs'
+                                          element={<Blogs />}
                                     ></Route>
                                     <Route path='*' element={<Error />} />
                               </Routes>
