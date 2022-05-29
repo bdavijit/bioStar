@@ -55,24 +55,24 @@ const Header = (props) => {
                   {user && !myUsers?.role ? (
                         <div className='HeaderLinks MenuBox'>
                               <button
-                                    className='hover:underline text-vw p-1'
+                                    className='Hover-border text-vw p-1'
                                     onClick={handelOrders}
                               >
                                     My Orders
                               </button>
                               <Link
-                                    className='hover:underline text-vw p-1'
+                                    className='Hover-border text-vw p-1'
                                     to='/AddNewReview'
                               >
                                     Add A Review
                               </Link>
                               <Link
-                                    className='hover:underline text-vw p-1'
+                                    className='Hover-border text-vw p-1'
                                     to='/MyProfile'
                               >
                                     My Profile
                               </Link>
-                              <button className='btn' onClick={handleSignOut}>
+                              <button className='btn mt-3' onClick={handleSignOut}>
                                     signout
                               </button>
                         </div>
@@ -82,31 +82,31 @@ const Header = (props) => {
                   {user && myUsers?.role ? (
                         <div className='HeaderLinks MenuBox'>
                               <Link
-                                    className='hover:underline text-vw p-1'
+                                    className='Hover-border text-vw p-1'
                                     to='/MyProfile'
                               >
                                     My Profile
                               </Link>
                               <Link
-                                    className='hover:underline text-vw p-1'
+                                    className='Hover-border text-vw p-1'
                                     to='/ManageAllOrders'
                               >
                                     Manage All Orders
                               </Link>
                               <Link
-                                    className='hover:underline text-vw p-1'
+                                    className='Hover-border text-vw p-1'
                                     to='/AddAProduct'
                               >
                                     Add A Product
                               </Link>
                               <Link
-                                    className='hover:underline text-vw p-1'
+                                    className='Hover-border text-vw p-1'
                                     to='/MakeAdmin'
                               >
                                     Make Admin
                               </Link>
                               <button
-                                    className='hover:underline text-vw p-1'
+                                    className='Hover-border text-vw p-1'
                                     onClick={handleManageProducts}
                               >
                                     Manage Products
@@ -121,23 +121,23 @@ const Header = (props) => {
                   )}
                   <h1 className='text-center text-2xl'>Main Menus</h1>
                   <div className='HeaderLinks MenuBox'>
-                        <Link className='hover:underline text-vw p-1' to='/'>
+                        <Link className='Hover-border text-vw p-1' to='/'>
                               Home
                         </Link>
                         <Link
-                              className='hover:underline text-vw p-1'
+                              className='Hover-border text-vw p-1'
                               to='/Product'
                         >
                               Product
                         </Link>
                         <Link
-                              className='hover:underline text-vw p-1'
+                              className='Hover-border text-vw p-1'
                               to='/MyPortfolio'
                         >
                               My Portfolio
                         </Link>
                         <Link
-                              className='hover:underline text-vw p-1'
+                              className='Hover-border text-vw p-1'
                               to='/Login'
                         >
                               Login/Register
