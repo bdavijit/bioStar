@@ -1,5 +1,24 @@
 color: #ed2d34
 
+Live Site: https://biostar2-d38fa.web.app/
+client side: https://github.com/programming-hero-web-course1/manufacturer-website-client-side-bdavijit
+server-side: https://github.com/programming-hero-web-course1/manufacturer-website-server-side-bdavijit
+Admin Email: bdavijit@admin.com
+passWord: 123456@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
             const navigate = useNavigate();
         
 
@@ -16,4 +35,4 @@ color: #ed2d34
         grid-template-columns: repeat(1, 1fr);
   
       }
-}
+} -->
