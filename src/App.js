@@ -90,7 +90,6 @@ function App() {
                                           path='/ManageProducts/:email'
                                           element={<ManageProducts />}
                                     ></Route>
-                                    {/* done */}
                                     <Route
                                           path='/Updateproducts/:pid'
                                           element={<Updateproducts />}

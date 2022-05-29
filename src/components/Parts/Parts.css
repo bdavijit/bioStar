@@ -1,6 +1,7 @@
 .PartsBox {
       display: grid;
       grid-template-columns: 0.1fr 1fr 0.1fr;
+      grid-gap: 2rem;
       justify-items: center;
       align-items: center;
 

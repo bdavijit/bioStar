@@ -2,6 +2,7 @@ import React from 'react';
 import useFindAdmin from '../../hook/usefindAdmin';
 import useFirebase from '../../hook/useFirebase';
 import Login2 from '../Login/Login';
+import './ManageAllOrder.css'
 
 const ManageAllOrdersCard = (props) => {
       const { user } = useFirebase();
@@ -75,16 +76,16 @@ const ManageAllOrdersCard = (props) => {
       return (
             <>
                   {user && myUsers?.role ? (
-                        <section>
-                              <div>
+                        <section className='ManageAllOrderBox'>
+                              <div className='ManageAllSec'>
                                     <img src={pImage} alt='' />
                               </div>
-                              <div>
-                                    <p>{pName}</p>
-                                    <p>{pPrice}</p>
-                                    <p>{status}</p>
+                              <div className=''>
+                                    <p className='text-center'>{pName}</p>
+                                    <p className='text-center'>{pPrice}</p>
+                                    <p className='text-center'>{status}</p>
                               </div>
-                              <div>
+                              <div className='ManageAllSec'>
                                     {status === 'unpaid' ? (
                                           <>
                                                 <button

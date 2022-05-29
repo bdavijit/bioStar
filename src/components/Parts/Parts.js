@@ -51,7 +51,7 @@ const Parts = () => {
                               <h1 className='text-4xl font-bold  text-center'>
                                     {products[index]?.name}
                               </h1>
-                              <p className='py-6'>
+                              <p className='py-6 text-center'>
                                     {products[index]?.description}
                               </p>
                               <button className='btn '>
