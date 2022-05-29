@@ -11,6 +11,10 @@ const Home = () => {
           <div>
                 <Banner />
                 <BusinessSummary />
+
+                <h1 className='text-center text-5xl m-10 my-text-color'>
+                      Our Collection
+                </h1>
                 <Parts />
                 <h1 className='text-center text-5xl m-10 my-text-color'>
                       Where to Buy

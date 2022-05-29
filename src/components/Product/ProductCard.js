@@ -13,13 +13,15 @@ const ProductCard = (props) => {
                   window.scrollTo(0, 0);
          }
     return (
-        <div className='ProductCard'>
-            <img src={image} alt="" />
-            <p>{name}</p>
-            <p>{description}</p>
-            <p>{price}</p>
-            <button className='btn ' onClick={handelBuyNow}>buy Now</button>
-        </div>
+          <div className='ProductCard mt-3'>
+                <img src={image} alt='' />
+                <p className='text-center text-2xl my-text-color'>{name}</p>
+                <p>{description}</p>
+                <p className='text-center text-xl'>{price}</p>
+                <button className='btn ' onClick={handelBuyNow}>
+                      buy Now
+                </button>
+          </div>
     );
 };
 

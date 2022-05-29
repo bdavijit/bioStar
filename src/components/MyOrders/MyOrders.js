@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import useFindMyOrder from '../../hook/useFindMyOrder';
 import MyOrderCard from './MyOrderCard';
-import './MyOrders.css'
+import './MyOrders.css';
 
 const MyOrders = () => {
       const { email } = useParams();

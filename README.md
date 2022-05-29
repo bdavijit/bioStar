@@ -7,6 +7,8 @@ color: #ed2d34
                   navigate('/products/' + _id);
                   window.scrollTo(0, 0);
          }
+         
+         text-center my-text-color text-xl
 
 
          @media only screen and (max-width: 800px) {

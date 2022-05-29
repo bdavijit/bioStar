@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import useFirebase from '../hook/useFirebase';
+import '../components/Login/Login.css'
 
 const Signup = () => {
       const {
@@ -31,7 +32,7 @@ const Signup = () => {
       };
 
       return (
-            <section>
+            <section className='LoginBox'>
                   <form onSubmit={handleSubmit(onSubmit)}>
                         <div className='form-control w-full max-w-xs'>
                               <label className='label'>
@@ -135,6 +136,7 @@ const Signup = () => {
                               </Link>
                         </small>
                   </p>
+                  <div class='divider'>OR</div>
                   <button className='btn ' onClick={singInWithGoogle}>
                         google lOGIN
                   </button>

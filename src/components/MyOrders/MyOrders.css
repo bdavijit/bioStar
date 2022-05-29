@@ -1,11 +1,32 @@
-.MyOrdersBox{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.MyOrdersBox {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 3rem;
+      max-width: 1200px;
+      margin: auto;
+}
+
+.MyOrdersBoxCard {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: flex-end;
+}
+
+
+@media only screen and (max-width: 1000px) {
+.MyOrdersBox {
+
+      grid-template-columns: repeat(2, 1fr);
 
 }
 
-.MyOrdersBoxCard{
-    display: flex;
-        flex-direction: column;
-    align-content: center;
+}
+@media only screen and (max-width: 600px) {
+.MyOrdersBox {
+
+      grid-template-columns: repeat(1, 1fr);
+
+}
+
 }

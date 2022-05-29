@@ -29,13 +29,13 @@ const MyOrderCard = (props) => {
     return (
           <div className='MyOrdersBoxCard'>
                 <img src={pImage} alt='' />
-                <p>{pName}</p>
-                <p>Price : {pPrice}</p>
-                <p>quintity: {quintity}</p>
+                <p className='text-center my-text-color text-xl'>{pName}</p>
+                <p className='text-center'>Price : {pPrice}</p>
+                <p className='text-center'>quintity: {quintity}</p>
                 {!paid ? <button className='btn m-2'>payNow</button> : 'paid'}
                 {!paid ? (
                       <button
-                            className='btn m-2 '
+                            className='btn m-2 Bg-my-primary'
                             onClick={() => DeleteOrder(_id)}
                       >
                             Delete

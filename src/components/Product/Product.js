@@ -6,7 +6,7 @@ import ProductCard from './ProductCard';
 const Product = () => {
       const [allProduct, setallProduct] = useProduct();
       return (
-            <section className='ProductBox'>
+            <section className='ProductBox '>
                   {allProduct?.map((Product) => (
                         <ProductCard
                               key={Product._id}

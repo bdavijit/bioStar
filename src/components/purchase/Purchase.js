@@ -86,11 +86,7 @@ const Purchase = () => {
                         );
                   }
             }
-            // console.log(
-            //       OneProduct?.minimumOrder,
-            //       MinimumOrder,
-            //       OneProduct?.quantity
-            // );
+ 
       };
 
       return (
@@ -102,10 +98,16 @@ const Purchase = () => {
                                     <img src={OneProduct?.image} alt='' />
                                     <div className='text-center'>
                                           {' '}
-                                          <p>{OneProduct?.name}</p>
+                                          <p className='text-2xl my-text-color'>
+                                                {OneProduct?.name}
+                                          </p>
                                           <p>{OneProduct?.description}</p>
-                                          <p>{OneProduct?.price}</p>
-                                          <p>{OneProduct?.quantity}</p>
+                                          <p className='text-xl'>
+                                                Price: {OneProduct?.price}
+                                          </p>
+                                          <p className='text-lg'>
+                                                Quantity: {OneProduct?.quantity}
+                                          </p>
                                     </div>
                               </div>
                               <br></br>
