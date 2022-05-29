@@ -1,9 +1,13 @@
 import React from 'react';
+import useFindAdmin from '../../hook/usefindAdmin';
 import useFirebase from '../../hook/useFirebase';
+import Login2 from '../Login/Login';
 import './AddAProduct.css';
 
 const AddAProduct = () => {
       const { user } = useFirebase();
+
+      const [myUsers, setmyUsers] = useFindAdmin(user?.email);
       const AddProduct = (event) => {
             event.preventDefault();
             const name = event.target.name.value;
@@ -40,73 +44,93 @@ const AddAProduct = () => {
                   });
       };
       return (
-            <section>
-                  <form onSubmit={AddProduct}>
-                        <div className='AddProductCSS'>
-                              <input
-                                    type='text'
-                                    placeholder='name'
-                                    class='input m-3 input-bordered input-error w-full max-w-xs'
-                                    name='name'
-                                    required
-                              />
-                              <input
-                                    type='text'
-                                    placeholder='image'
-                                    class='input m-3 input-bordered input-error w-full max-w-xs'
-                                    name='image'
-                                    required
-                              />
-                              <input
-                                    type='number'
-                                    placeholder='minimumOrder'
-                                    class='input m-3 input-bordered input-error w-full max-w-xs'
-                                    name='minimumOrder'
-                                    required
-                              />
-                              <input
-                                    type='number'
-                                    placeholder='price'
-                                    class='input m-3 input-bordered input-error w-full max-w-xs'
-                                    name='price'
-                                    required
-                              />
-                              <input
-                                    type='number'
-                                    placeholder='quantity'
-                                    class='input m-3 input-bordered input-error w-full max-w-xs'
-                                    name='quantity'
-                                    required
-                              />
-                              <input
-                                    type='number'
-                                    placeholder='sold'
-                                    class='input m-3 input-bordered input-error w-full max-w-xs'
-                                    name='sold'
-                                    required
-                              />
-                              <input
-                                    type='text'
-                                    placeholder='UserEmail'
-                                    value={user.email}
-                                    class='input m-3 input-bordered input-error w-full max-w-xs'
-                                    name='UserEmail'
-                                    required
-                              />
-                              <textarea
-                                    class='textarea  m-3 textarea-error'
-                                    placeholder='description'
-                                    name='description'
-                                    required
-                              ></textarea>
-                              <br></br>
+            <div>
+                  {user && myUsers?.role ? (
+                        <section>
+                              <form onSubmit={AddProduct}>
+                                    <div className='AddProductCSS'>
+                                          <input
+                                                type='text'
+                                                placeholder='name'
+                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                name='name'
+                                                required
+                                          />
+                                          <input
+                                                type='text'
+                                                placeholder='image'
+                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                name='image'
+                                                required
+                                          />
+                                          <input
+                                                type='number'
+                                                placeholder='minimumOrder'
+                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                name='minimumOrder'
+                                                required
+                                          />
+                                          <input
+                                                type='number'
+                                                placeholder='price'
+                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                name='price'
+                                                required
+                                          />
+                                          <input
+                                                type='number'
+                                                placeholder='quantity'
+                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                name='quantity'
+                                                required
+                                          />
+                                          <input
+                                                type='number'
+                                                placeholder='sold'
+                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                name='sold'
+                                                required
+                                          />
+                                          <input
+                                                type='text'
+                                                placeholder='UserEmail'
+                                                value={user.email}
+                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                name='UserEmail'
+                                                required
+                                          />
+                                          <textarea
+                                                class='textarea  m-3 textarea-error'
+                                                placeholder='description'
+                                                name='description'
+                                                required
+                                          ></textarea>
+                                          <br></br>
 
-                              <button className='btn m-3' type='submit'>
-                                    Add Product
-                              </button>
-                        </div>
-                  </form>
-            </section>
+                                          <button
+                                                className='btn m-3'
+                                                type='submit'
+                                          >
+                                                Add Product
+                                          </button>
+                                    </div>
+                              </form>
+                        </section>
+                  ) : (
+                        <>
+                              {myUsers?.role === undefined ? (
+                                    <>
+                                          <h1 className='text-center'>
+                                                Please login as a Admin
+                                          </h1>
+                                          <Login2 />
+                                    </>
+                              ) : (
+                                    <h1>test</h1>
+                              )}
+                        </>
+                  )}
+            </div>
       );
 };
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useFindAdmin from '../../hook/usefindAdmin';
 import useFirebase from '../../hook/useFirebase';
 import Login2 from '../Login/Login';
 import "./Purchase.css";
@@ -9,7 +10,9 @@ import "./Purchase.css";
 const Purchase = () => {
       const { pId } = useParams();
       const { user } = useFirebase();
+  
 
+      const [myUsers, setmyUsers] = useFindAdmin(user?.email);
       const [OneProduct, setOneProduct] = useState();
       const [MinimumOrder, setMinimumOrder] = useState(0);
       useEffect(() => {
@@ -91,8 +94,8 @@ const Purchase = () => {
 
       return (
             <div>
-                  {user ? (
-                        <>
+                  {user && !myUsers?.role ?(
+                        <div>
                               <ToastContainer />
                               <div className='PurchaseCard'>
                                     <img src={OneProduct?.image} alt='' />
@@ -168,9 +171,12 @@ const Purchase = () => {
                                           </button>
                                     </div>
                               </form>
-                        </>
+                        </div>
                   ) : (
+                     <>
+                        <h1 className='text-center'>Please login as a user</h1> 
                         <Login2 />
+                     </>
                   )}
             </div>
       );
