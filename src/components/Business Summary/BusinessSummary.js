@@ -21,21 +21,21 @@ const BusinessSummary = () => {
                   .then((data) => setAlluser(data));
       }, []);
       return (
-            <section className='BusinessSummaryBox'>
+            <section className='BusinessSummaryBox mt-10'>
                   <div className='BusinessMenu'>
-                        <BiUserCheck className='my-text-color text-2xl' />
-                        <p>{allUser?.length}</p>
-                        <h1 className=''>customers</h1>
+                        <BiUserCheck className='my-text-color text-6xl' />
+                        <p className='text-3xl mt-2'>{allUser?.length}</p>
+                        <h1 className='text-2xl'>customers</h1>
                   </div>
                   <div className='BusinessMenu'>
-                        <MdFeedback className='my-text-color' />
-                        <p>{reviews?.length}</p>
-                        Reviews
+                        <MdFeedback className='my-text-color text-6xl' />
+                        <p className='text-3xl mt-2'>{reviews?.length}</p>
+                        <h1 className='text-2xl'>Reviews</h1>
                   </div>
                   <div className='BusinessMenu'>
-                        <GiComputerFan className='my-text-color' />
-                        <p>{allProduct?.length}</p>
-                        products
+                        <GiComputerFan className='my-text-color text-6xl' />
+                        <p className='text-3xl mt-2'>{allProduct?.length}</p>
+                        <h1 className='text-2xl'>Products</h1>
                   </div>
             </section>
       );

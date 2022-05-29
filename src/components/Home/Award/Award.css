@@ -1,0 +1,13 @@
+.AwardBox{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+.AwardBox{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+}

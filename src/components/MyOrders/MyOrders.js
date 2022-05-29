@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useFindMyOrder from '../../hook/useFindMyOrder';
 import MyOrderCard from './MyOrderCard';
+import './MyOrders.css'
 
 const MyOrders = () => {
       const { email } = useParams();
@@ -9,7 +10,7 @@ const MyOrders = () => {
       console.log(myOrders);
 
       return (
-            <div>
+            <div className='MyOrdersBox'>
                   {myOrders?.map((Orders) => (
                         <MyOrderCard
                               Orders={Orders}

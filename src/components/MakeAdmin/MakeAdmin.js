@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import MakeAdminCard from './MakeAdminCard';
+import './MakeAdmin.css'
 
 const MakeAdmin = () => {
     const[ allUser, setAlluser] = useState([]);
@@ -10,9 +11,7 @@ const MakeAdmin = () => {
           }, []);
 
     return (
-          <div>
-                MakeAdmin
-                {allUser?.length}
+          <div className='MakeAdminBox'>
                 {allUser?.map((user) => (
                       <MakeAdminCard
                             key={user._id}

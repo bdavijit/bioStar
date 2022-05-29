@@ -12,10 +12,17 @@ const Home = () => {
                 <Banner />
                 <BusinessSummary />
                 <Parts />
-                <h1 className='text-center text-2xl'>Where to Buy</h1>
+                <h1 className='text-center text-5xl m-10 my-text-color'>
+                      Where to Buy
+                </h1>
                 <WheretoBuy />
-                <h1 className='text-center text-2xl'>Award</h1>
+                <h1 className='text-center text-5xl m-10 my-text-color'>
+                      Award
+                </h1>
                 <Award />
+                <h1 className='text-center text-5xl m-10 my-text-color'>
+                      Reviews
+                </h1>
                 <Reviews />
           </div>
     );

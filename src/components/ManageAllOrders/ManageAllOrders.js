@@ -1,7 +1,20 @@
 import React from 'react';
+import useOrder from '../../hook/useOrder';
+import ManageAllOrdersCard from './ManageAllOrdersCard';
 
 const ManageAllOrders = () => {
-    return <div>ManageAllOrders</div>;
+      const [allOrder, setallOrder] = useOrder();
+      return (
+            <section>
+                  {allOrder?.length}
+                  {allOrder?.map((Order) => (
+                        <ManageAllOrdersCard
+                              key={Order._id}
+                              Order={Order}
+                        ></ManageAllOrdersCard>
+                  ))}
+            </section>
+      );
 };
 
 export default ManageAllOrders;

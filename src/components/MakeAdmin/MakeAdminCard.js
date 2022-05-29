@@ -37,7 +37,7 @@ console.log(ProfileDate);
       };
 
       return (
-            <div>
+            <div className='MakeAdminCard'>
                   <p>{email}</p>
                   {role ? (
                         ''

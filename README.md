@@ -7,3 +7,11 @@ color: #ed2d34
                   navigate('/products/' + _id);
                   window.scrollTo(0, 0);
          }
+
+
+         @media only screen and (max-width: 800px) {
+      .MakeAdminBox {
+        grid-template-columns: repeat(1, 1fr);
+  
+      }
+}

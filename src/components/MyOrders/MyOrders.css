@@ -1,0 +1,11 @@
+.MyOrdersBox{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.MyOrdersBoxCard{
+    display: flex;
+        flex-direction: column;
+    align-content: center;
+}

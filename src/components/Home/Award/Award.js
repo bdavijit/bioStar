@@ -1,8 +1,9 @@
 import React from 'react';
+import './Award.css'
 
 const Award = () => {
     return (
-          <section className='WhereToBuy'>
+          <section className='AwardBox'>
                 <img
                       src='https://ttesports.azureedge.net/files/Product_Review/2015100817284993-91.jpg'
                       alt=''

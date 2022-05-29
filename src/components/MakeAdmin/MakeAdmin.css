@@ -1,0 +1,21 @@
+.MakeAdminBox {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 3rem;
+      margin: 20px;
+}
+
+.MakeAdminCard {
+      display: flex;
+      border: 1px solid black;
+      border-radius: 10px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+      .MakeAdminBox {
+            grid-template-columns: repeat(1, 1fr);
+      }
+}
