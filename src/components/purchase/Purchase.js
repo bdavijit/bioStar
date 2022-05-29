@@ -28,6 +28,7 @@ const Purchase = () => {
             const mobile = event.target.mobile.value;
             const Address = event.target.Address.value;
             const paid = false;
+            const status = "unpaid";
             const quantity = MinimumOrder;
 
             const Order = {
@@ -37,6 +38,7 @@ const Purchase = () => {
                   Address,
                   pId,
                   paid,
+                  status,
                   quintity: quantity,
                   pName: OneProduct?.name,
                   pImage: OneProduct?.image,
@@ -58,10 +60,16 @@ const Purchase = () => {
       };
 
       const handelQuantity = (btnName) => {
+              console.log(
+                    OneProduct?.minimumOrder,
+                    MinimumOrder,
+                    OneProduct?.quantity
+              );
             if (MinimumOrder === 0) {
                   setMinimumOrder(parseInt(OneProduct?.minimumOrder));
             } else if (btnName === 'plus') {
-                  if (OneProduct?.quantity > MinimumOrder) {
+                  if (OneProduct?.quantity > parseInt(MinimumOrder)) {
+                        console.log();
                         setMinimumOrder(parseInt(parseInt(MinimumOrder) + 1));
                   } else {
                         toast('Stock Out');
@@ -69,7 +77,7 @@ const Purchase = () => {
             } else {
                   if (
                         MinimumOrder > 0 &&
-                        OneProduct.minimumOrder < MinimumOrder
+                        OneProduct.minimumOrder < parseInt(MinimumOrder)
                   ) {
                         setMinimumOrder(parseInt(parseInt(MinimumOrder) - 1));
                   } else {
@@ -78,11 +86,11 @@ const Purchase = () => {
                         );
                   }
             }
-            console.log(
-                  OneProduct?.minimumOrder,
-                  MinimumOrder,
-                  OneProduct?.quantity
-            );
+            // console.log(
+            //       OneProduct?.minimumOrder,
+            //       MinimumOrder,
+            //       OneProduct?.quantity
+            // );
       };
 
       return (
@@ -133,17 +141,20 @@ const Purchase = () => {
                                                 class='input input-bordered input-error w-full max-w-xs'
                                                 value={user?.email}
                                                 name='email'
+                                                required
                                           />
                                           <input
                                                 type='number'
                                                 placeholder='phone number'
                                                 name='mobile'
                                                 class='input input-bordered input-error w-full max-w-xs'
+                                                required
                                           />
                                           <textarea
                                                 class='textarea textarea-error'
                                                 placeholder='Address'
                                                 name='Address'
+                                                required
                                           ></textarea>
                                           <br></br>
 

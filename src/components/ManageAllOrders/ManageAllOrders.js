@@ -11,6 +11,8 @@ const ManageAllOrders = () => {
                         <ManageAllOrdersCard
                               key={Order._id}
                               Order={Order}
+                              orders={allOrder}
+                              Setorders={setallOrder}
                         ></ManageAllOrdersCard>
                   ))}
             </section>
