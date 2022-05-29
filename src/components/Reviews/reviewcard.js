@@ -1,20 +1,21 @@
 import React from 'react';
+import './Reviews.css'
 
 const Reviewcard = (props) => {
 
     const { image, name, review } = props?.review;
     // console.log(props.review);
     return (
-          <div>
-                <div>
+          <div >
+                <div className='reviewCardHome'>
                       <div className='avatar'>
                             <div className='w-24 mask mask-squircle'>
                                   <img src={image} alt='' />
                             </div>
                       </div>
-                      <h1>{name}</h1>
-                      <h1>{review ? review : ""}</h1>
-                      <div className='rating rating-sm'>
+                      <h1 className='text-2xl text-center'>{name}</h1>
+                      <h1>{review ? review.slice(0, 100) + "..." : ''}</h1>
+                      <div className='rating rating-sm '>
                             <input
                                   type='radio'
                                   name='rating-6'

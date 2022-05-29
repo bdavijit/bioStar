@@ -1,14 +1,27 @@
 .PartsBox {
-
       display: grid;
       grid-template-columns: 0.1fr 1fr 0.1fr;
       justify-items: center;
       align-items: center;
 
-      max-width: 900px;
+      max-width: 1400px;
+      width: 100%;
       margin: auto;
+      padding: 40px;
 }
 
-/* .partsCard{
-      display: ;
-} */
+.partsCard {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+      align-items: center;
+      justify-items: center;
+}
+
+@media only screen and (max-width: 912px) {
+.partsCard {
+
+      grid-template-columns: repeat(1, 1fr);
+   
+}
+}

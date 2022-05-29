@@ -10,14 +10,14 @@ const Parts = () => {
       const [Right, setRight] = useState(false);
 
       useEffect(() => {
-            fetch(`http://localhost:5001/products?page=0&size=6`)
+            fetch(`http://localhost:5001/products?page=0&size=9`)
                   .then((res) => res.json())
                   .then((data) => setProducts(data));
       }, []);
 
       const HandelIndex = (btnName) => {
             if (btnName === 'next') {
-                  if (index === 5) {
+                  if (index === products?.length - 1) {
                         setRight(true);
                   } else {
                         setindex(index + 1);
@@ -42,29 +42,26 @@ const Parts = () => {
                   >
                         <FaAngleLeft />
                   </button>
-                  <div>
-                        <div className=''>
-                              <div>
-                                    <img src={products[index]?.image} alt='' />
-                                    <div>
-                                          <h1 className='text-5xl font-bold'>
-                                                {products[index]?.name}
-                                          </h1>
-                                          <p className='py-6'>
-                                                {products[index]?.description}
-                                          </p>
-                                          <button className='btn '>
-                                                <Link
-                                                      className=''
-                                                      to='/purchase'
-                                                >
-                                                      BuyNow
-                                                </Link>
-                                          </button>
-                                    </div>
-                              </div>
+
+                  <div className='partsCard'>
+                        <div>
+                              <img src={products[index]?.image} alt='' />
+                        </div>
+                        <div className='flex justify-center flex-col'>
+                              <h1 className='text-4xl font-bold  text-center'>
+                                    {products[index]?.name}
+                              </h1>
+                              <p className='py-6'>
+                                    {products[index]?.description}
+                              </p>
+                              <button className='btn '>
+                                    <Link className='' to='/purchase'>
+                                          BuyNow
+                                    </Link>
+                              </button>
                         </div>
                   </div>
+
                   <button
                         className='btn btn-circle btn-outline'
                         onClick={() => HandelIndex('next')}
