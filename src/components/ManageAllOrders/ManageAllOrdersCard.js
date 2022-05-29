@@ -28,7 +28,7 @@ const ManageAllOrdersCard = (props) => {
                   Address,
                   status: state,
             };
-            const url = `http://localhost:5001/orders/${pId}`;
+            const url = `https://mysterious-brook-63688.herokuapp.com/orders/${pId}`;
             fetch(url, {
                   method: 'PUT',
                   headers: {
@@ -48,7 +48,7 @@ const ManageAllOrdersCard = (props) => {
                     'Are you sure you want to delete?'
               );
               if (proceed) {
-                    const url = `http://localhost:5001/Order/${id}`;
+                    const url = `https://mysterious-brook-63688.herokuapp.com/Order/${id}`;
                     fetch(url, {
                           method: 'DELETE',
                     })

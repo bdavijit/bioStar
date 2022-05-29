@@ -1,15 +1,15 @@
 import {
-      createUserWithEmailAndPassword,
-      getAdditionalUserInfo,
-      getAuth,
-      GoogleAuthProvider,
-      onAuthStateChanged,
-      sendEmailVerification,
-      sendPasswordResetEmail,
-      signInWithEmailAndPassword,
-      signInWithPopup,
-      signOut,
-      updateProfile
+    createUserWithEmailAndPassword,
+    getAdditionalUserInfo,
+    getAuth,
+    GoogleAuthProvider,
+    onAuthStateChanged,
+    sendEmailVerification,
+    sendPasswordResetEmail,
+    signInWithEmailAndPassword,
+    signInWithPopup,
+    signOut,
+    updateProfile
 } from 'firebase/auth';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
@@ -118,7 +118,7 @@ const useFirebase = () => {
                                     Username,
                                     email,
                               };
-                              fetch('http://localhost:5001/User', {
+                              fetch('https://mysterious-brook-63688.herokuapp.com/User', {
                                     method: 'POST',
                                     headers: {
                                           'content-type': 'application/json',
@@ -158,7 +158,7 @@ const useFirebase = () => {
                               email,
                         };
 
-                        fetch('http://localhost:5001/User', {
+                        fetch('https://mysterious-brook-63688.herokuapp.com/User', {
                               method: 'POST',
                               headers: {
                                     'content-type': 'application/json',

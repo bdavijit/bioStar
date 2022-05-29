@@ -4,7 +4,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useFirebase from '../../hook/useFirebase';
 import Login2 from '../Login/Login';
-import "./Purchase.css"
+import "./Purchase.css";
 
 const Purchase = () => {
       const { pId } = useParams();
@@ -13,7 +13,7 @@ const Purchase = () => {
       const [OneProduct, setOneProduct] = useState();
       const [MinimumOrder, setMinimumOrder] = useState(0);
       useEffect(() => {
-            fetch(`http://localhost:5001/products/${pId}`)
+            fetch(`https://mysterious-brook-63688.herokuapp.com/products/${pId}`)
                   .then((res) => res.json())
                   .then((data) => {
                         setOneProduct(data);
@@ -45,7 +45,7 @@ const Purchase = () => {
                   pPrice: OneProduct?.price,
             };
 
-            fetch('http://localhost:5001/Order', {
+            fetch('https://mysterious-brook-63688.herokuapp.com/Order', {
                   method: 'POST',
                   headers: {
                         'content-type': 'application/json',

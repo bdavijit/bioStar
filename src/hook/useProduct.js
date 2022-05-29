@@ -5,7 +5,7 @@ const useProduct = () => {
 
       
       useEffect(() => {
-            fetch(`http://localhost:5001/products`)
+            fetch(`https://mysterious-brook-63688.herokuapp.com/products`)
                   .then((res) => res.json())
                   .then((data) => setallProduct(data));
       }, []);

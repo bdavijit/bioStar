@@ -34,7 +34,7 @@ const AddNewReview = () => {
                   rate,
             };
 
-            fetch('http://localhost:5001/review', {
+            fetch('https://mysterious-brook-63688.herokuapp.com/review', {
                   method: 'POST',
                   headers: {
                         'content-type': 'application/json',

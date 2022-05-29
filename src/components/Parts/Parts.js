@@ -10,7 +10,7 @@ const Parts = () => {
       const [Right, setRight] = useState(false);
 
       useEffect(() => {
-            fetch(`http://localhost:5001/products?page=0&size=9`)
+            fetch(`https://mysterious-brook-63688.herokuapp.com/products?page=0&size=9`)
                   .then((res) => res.json())
                   .then((data) => setProducts(data));
       }, []);

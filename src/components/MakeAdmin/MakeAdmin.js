@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import './MakeAdmin.css';
 import MakeAdminCard from './MakeAdminCard';
-import './MakeAdmin.css'
 
 const MakeAdmin = () => {
     const[ allUser, setAlluser] = useState([]);
           useEffect(() => {
-                fetch(`http://localhost:5001/User`)
+                fetch(`https://mysterious-brook-63688.herokuapp.com/User`)
                       .then((res) => res.json())
                       .then((data) => setAlluser(data));
           }, []);

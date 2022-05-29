@@ -26,7 +26,7 @@ const AddAProduct = () => {
                   description,
             };
 
-            fetch('http://localhost:5001/Product', {
+            fetch('https://mysterious-brook-63688.herokuapp.com/Product', {
                   method: 'POST',
                   headers: {
                         'content-type': 'application/json',

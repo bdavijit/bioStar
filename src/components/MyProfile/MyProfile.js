@@ -25,7 +25,7 @@ const MyProfile = () => {
                   education,
             };
             console.log(typeof ProfileDate);
-            const url = `http://localhost:5001/user/${email}`;
+            const url = `https://mysterious-brook-63688.herokuapp.com/user/${email}`;
             fetch(url, {
                   method: 'PUT',
                   headers: {

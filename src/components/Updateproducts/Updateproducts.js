@@ -27,7 +27,7 @@ const Updateproducts = () => {
 
             console.log(Product);
           
-           const url = `http://localhost:5001/Product/${pid}`;
+           const url = `https://mysterious-brook-63688.herokuapp.com/Product/${pid}`;
             fetch(url, {
                   method: 'PUT',
                   headers: {

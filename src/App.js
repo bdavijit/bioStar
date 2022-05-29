@@ -77,10 +77,7 @@ function App() {
                                           path='/MyProfile'
                                           element={<MyProfile />}
                                     ></Route>
-                                    <Route
-                                          path='/ManageAllOrders'
-                                          element={<ManageAllOrders />}
-                                    ></Route>
+
                                     <Route
                                           path='/AddAProduct'
                                           element={<AddAProduct />}
@@ -93,6 +90,7 @@ function App() {
                                           path='/ManageProducts/:email'
                                           element={<ManageProducts />}
                                     ></Route>
+                                    {/* done */}
                                     <Route
                                           path='/Updateproducts/:pid'
                                           element={<Updateproducts />}
@@ -100,6 +98,10 @@ function App() {
                                     <Route
                                           path='/MyPortfolio'
                                           element={<MyPortfolio />}
+                                    ></Route>
+                                    <Route
+                                          path='/ManageAllOrders'
+                                          element={<ManageAllOrders />}
                                     ></Route>
                                     <Route path='*' element={<Error />} />
                               </Routes>

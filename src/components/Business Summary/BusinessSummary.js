@@ -10,13 +10,13 @@ const BusinessSummary = () => {
       const [reviews, setreviews] = useState([]);
 
       useEffect(() => {
-            fetch(`http://localhost:5001/reviews`)
+            fetch(`https://mysterious-brook-63688.herokuapp.com/reviews`)
                   .then((res) => res.json())
                   .then((data) => setreviews(data));
       }, []);
       const [allUser, setAlluser] = useState([]);
       useEffect(() => {
-            fetch(`http://localhost:5001/User`)
+            fetch(`https://mysterious-brook-63688.herokuapp.com/User`)
                   .then((res) => res.json())
                   .then((data) => setAlluser(data));
       }, []);

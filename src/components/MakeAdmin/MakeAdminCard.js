@@ -20,7 +20,7 @@ const MakeAdminCard = (props) => {
 console.log(email);
 console.log(ProfileDate);
 
-            const url = `http://localhost:5001/user2/${email}`;
+            const url = `https://mysterious-brook-63688.herokuapp.com/user2/${email}`;
             fetch(url, {
                   method: 'PUT',
                   headers: {
