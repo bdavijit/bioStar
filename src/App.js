@@ -22,10 +22,9 @@ import Updateproducts from './components/Updateproducts/Updateproducts';
 import Signup from './Signup/Signup';
 import './style.css';
 
-
-
 function App() {
-      const [navControl , setnavControl ] = useState(false);
+      const [navControl, setnavControl] = useState(false);
+
       return (
             <>
                   <button
