@@ -4,7 +4,7 @@ import useFindAdmin from '../../hook/usefindAdmin';
 import useFindProduct from '../../hook/useFindProduct';
 import useFirebase from '../../hook/useFirebase';
 import Login2 from '../Login/Login';
-import './Updateproducts.css'
+import './Updateproducts.css';
 
 const Updateproducts = () => {
       const { pid } = useParams();
@@ -103,7 +103,7 @@ const Updateproducts = () => {
                         </section>
                   ) : (
                         <>
-                              {myUsers?.role === undefined ? (
+                              {!myUsers?.role === undefined ? (
                                     <>
                                           <h1 className='text-center'>
                                                 Please login as a Admin

@@ -118,7 +118,7 @@ const AddAProduct = () => {
                         </section>
                   ) : (
                         <>
-                              {myUsers?.role === undefined ? (
+                              {!myUsers?.role === undefined ? (
                                     <>
                                           <h1 className='text-center'>
                                                 Please login as a Admin
