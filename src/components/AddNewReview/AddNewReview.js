@@ -77,19 +77,19 @@ const AddNewReview = () => {
                                           <input
                                                 type='text'
                                                 placeholder='name'
-                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                className='input m-3 input-bordered input-error w-full max-w-xs'
                                                 value={user?.displayName}
                                                 name='name'
                                           />
                                           <input
                                                 type='text'
                                                 placeholder='image'
-                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                className='input m-3 input-bordered input-error w-full max-w-xs'
                                                 value={user?.photoURL}
                                                 name='image'
                                           />
                                           <textarea
-                                                class='textarea m-3 textarea-error'
+                                                className='textarea m-3 textarea-error'
                                                 placeholder='review'
                                                 name='review'
                                           ></textarea>

@@ -73,7 +73,7 @@ const Updateproducts = () => {
                                     <input
                                           type='number'
                                           placeholder='Price'
-                                          class='input m-3 input-bordered input-error w-full max-w-xs'
+                                          className='input m-3 input-bordered input-error w-full max-w-xs'
                                           name='price'
                                           required
                                     />
@@ -81,7 +81,7 @@ const Updateproducts = () => {
                                     <input
                                           type='number'
                                           placeholder='Quantity'
-                                          class='input m-3 input-bordered input-error w-full max-w-xs'
+                                          className='input m-3 input-bordered input-error w-full max-w-xs'
                                           name='quantity'
                                           required
                                     />
@@ -89,7 +89,7 @@ const Updateproducts = () => {
                                     <input
                                           type='number'
                                           placeholder='Sold'
-                                          class='input m-3 input-bordered input-error w-full max-w-xs'
+                                          className='input m-3 input-bordered input-error w-full max-w-xs'
                                           name='sold'
                                           required
                                     />

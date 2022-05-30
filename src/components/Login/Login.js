@@ -121,7 +121,7 @@ const Login2 = () => {
                               </Link>
                         </small>
                   </p>
-                  <div class='divider'>OR</div>
+                  <div className='divider'>OR</div>
                   <button className='btn mt-3' onClick={singInWithGoogle}>
                         google lOGIN
                   </button>

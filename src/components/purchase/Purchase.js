@@ -136,14 +136,14 @@ const Purchase = () => {
                                           <input
                                                 type='text'
                                                 placeholder='name'
-                                                class='input input-bordered input-error w-full max-w-xs'
+                                                className='input input-bordered input-error w-full max-w-xs'
                                                 value={user?.displayName}
                                                 name='name'
                                           />
                                           <input
                                                 type='text'
                                                 placeholder='email'
-                                                class='input input-bordered input-error w-full max-w-xs'
+                                                className='input input-bordered input-error w-full max-w-xs'
                                                 value={user?.email}
                                                 name='email'
                                                 required
@@ -152,11 +152,11 @@ const Purchase = () => {
                                                 type='number'
                                                 placeholder='phone number'
                                                 name='mobile'
-                                                class='input input-bordered input-error w-full max-w-xs'
+                                                className='input input-bordered input-error w-full max-w-xs'
                                                 required
                                           />
                                           <textarea
-                                                class='textarea textarea-error'
+                                                className='textarea textarea-error'
                                                 placeholder='Address'
                                                 name='Address'
                                                 required

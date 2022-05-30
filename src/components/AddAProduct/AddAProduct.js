@@ -53,42 +53,42 @@ const AddAProduct = () => {
                                           <input
                                                 type='text'
                                                 placeholder='name'
-                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                className='input m-3 input-bordered input-error w-full max-w-xs'
                                                 name='name'
                                                 required
                                           />
                                           <input
                                                 type='text'
                                                 placeholder='image'
-                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                className='input m-3 input-bordered input-error w-full max-w-xs'
                                                 name='image'
                                                 required
                                           />
                                           <input
                                                 type='number'
                                                 placeholder='minimumOrder'
-                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                className='input m-3 input-bordered input-error w-full max-w-xs'
                                                 name='minimumOrder'
                                                 required
                                           />
                                           <input
                                                 type='number'
                                                 placeholder='price'
-                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                className='input m-3 input-bordered input-error w-full max-w-xs'
                                                 name='price'
                                                 required
                                           />
                                           <input
                                                 type='number'
                                                 placeholder='quantity'
-                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                className='input m-3 input-bordered input-error w-full max-w-xs'
                                                 name='quantity'
                                                 required
                                           />
                                           <input
                                                 type='number'
                                                 placeholder='sold'
-                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                className='input m-3 input-bordered input-error w-full max-w-xs'
                                                 name='sold'
                                                 required
                                           />
@@ -96,12 +96,12 @@ const AddAProduct = () => {
                                                 type='text'
                                                 placeholder='UserEmail'
                                                 value={user.email}
-                                                class='input m-3 input-bordered input-error w-full max-w-xs'
+                                                className='input m-3 input-bordered input-error w-full max-w-xs'
                                                 name='UserEmail'
                                                 required
                                           />
                                           <textarea
-                                                class='textarea  m-3 textarea-error'
+                                                className='textarea  m-3 textarea-error'
                                                 placeholder='description'
                                                 name='description'
                                                 required

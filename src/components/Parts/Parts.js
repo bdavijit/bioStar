@@ -55,7 +55,10 @@ const Parts = () => {
                                     {products[index]?.description}
                               </p>
                               <button className='btn '>
-                                    <Link className='' to='/purchase'>
+                                    <Link
+                                          className=''
+                                          to={`/products/${products[index]?._id}`}
+                                    >
                                           BuyNow
                                     </Link>
                               </button>

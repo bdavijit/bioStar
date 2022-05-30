@@ -21,8 +21,9 @@ const Reviews = () => {
     return (
           <div className='ReviewBox'>
           {
-              reviews.map( (review) =>(
+              reviews?.map( (review) =>(
                   <Reviewcard 
+                  key={review._id}
                       review = {review}
                   />
               ))

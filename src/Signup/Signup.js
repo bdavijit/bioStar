@@ -1,8 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import '../components/Login/Login.css';
 import useFirebase from '../hook/useFirebase';
-import '../components/Login/Login.css'
 
 const Signup = () => {
       const {
@@ -136,7 +136,7 @@ const Signup = () => {
                               </Link>
                         </small>
                   </p>
-                  <div class='divider'>OR</div>
+                  <div className='divider'>OR</div>
                   <button className='btn ' onClick={singInWithGoogle}>
                         google lOGIN
                   </button>
