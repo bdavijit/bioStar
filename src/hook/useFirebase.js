@@ -12,6 +12,7 @@ import {
     updateProfile
 } from 'firebase/auth';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import app from '../firebase.init';
@@ -28,6 +29,7 @@ const useFirebase = () => {
       const [email, setEmail] = useState('');
       const [password, setPassword] = useState('');
       const [loading, SetLoading] = useState(false);
+      const navigate = useNavigate();
 
       //update name
       const setUserName = (username) => {
@@ -175,6 +177,9 @@ const useFirebase = () => {
 
       const handleSignOut = () => {
             signOut(auth).then(() => {});
+            navigate('/' );
+            window.scrollTo(0, 0);
+
       };
 
       //value ta dhore rakhe
