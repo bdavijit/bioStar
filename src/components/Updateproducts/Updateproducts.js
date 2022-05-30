@@ -8,7 +8,8 @@ import './Updateproducts.css'
 
 const Updateproducts = () => {
       const { pid } = useParams();
-      const [OneProduct, setOneProduct] = useFindProduct(pid);
+      const [OneProduct, setOneProduct, ApiCall, setApiCall] =
+            useFindProduct(pid);
       const { user } = useFirebase();
 
       const [myUsers, setmyUsers] = useFindAdmin(user?.email);
@@ -41,7 +42,7 @@ const Updateproducts = () => {
                         console.log('success', data);
                         alert(' Product update');
                         event.target.reset();
-                        window.location.reload();
+                        setApiCall(!ApiCall);
                   });
       };
 

@@ -51,7 +51,8 @@ const ManageAllOrdersCard = (props) => {
                   .then((data) => {
                         console.log('success', data);
                         alert(' order update');
-                        window.location.reload();
+                        props.setrerenderOrder(!props.rerenderOrder);
+                        // window.location.reload();
                   });
       };
       const DeleteOrder = (id) => {
@@ -63,13 +64,13 @@ const ManageAllOrdersCard = (props) => {
                   })
                         .then((res) => res.json())
                         .then((data) => {
-                              console.log(data.deletedCount);
-                              if (data.deletedCount > 0) {
-                                    const remaining = props.orders.filter(
-                                          (order) => order._id !== id
-                                    );
-                                    props.Setorders(remaining);
-                              }
+                             props.setrerenderOrder(!props.rerenderOrder);
+                              // if (data.deletedCount > 0) {
+                              //       const remaining = props.orders.filter(
+                              //             (order) => order._id !== id
+                              //       );
+                              //       props.Setorders(remaining);
+                              // }
                               alert('ok');
                         });
             }
