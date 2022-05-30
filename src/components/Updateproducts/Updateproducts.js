@@ -4,6 +4,7 @@ import useFindAdmin from '../../hook/usefindAdmin';
 import useFindProduct from '../../hook/useFindProduct';
 import useFirebase from '../../hook/useFirebase';
 import Login2 from '../Login/Login';
+import './Updateproducts.css'
 
 const Updateproducts = () => {
       const { pid } = useParams();
@@ -47,35 +48,54 @@ const Updateproducts = () => {
       return (
             <div>
                   {user && myUsers?.role ? (
-                        <section>
-                              <h1>{OneProduct?.name}</h1>
-                              <img src={OneProduct?.image} alt='' />
-                              <p>Price :{OneProduct?.price}</p>
-                              <p>quantity: {OneProduct?.quantity}</p>
-                              <p>sold: {OneProduct?.sold}</p>
-                              <form onSubmit={UpdateProduct}>
+                        <section className='UpdateProductBox'>
+                              <div>
+                                    <img src={OneProduct?.image} alt='' />
+                                    <h1 className='text-center text-2xl my-text-color'>
+                                          {OneProduct?.name}
+                                    </h1>
+                                    <p className='text-center '>
+                                          Price :{OneProduct?.price}
+                                    </p>
+                                    <p className='text-center'>
+                                          quantity: {OneProduct?.quantity}
+                                    </p>
+                                    <p className='text-center mb-5'>
+                                          sold: {OneProduct?.sold}
+                                    </p>
+                              </div>
+                              <form
+                                    onSubmit={UpdateProduct}
+                                    className='flex flex-col items-center'
+                              >
                                     <input
                                           type='number'
-                                          placeholder='price'
+                                          placeholder='Price'
                                           class='input m-3 input-bordered input-error w-full max-w-xs'
                                           name='price'
                                           required
                                     />
+                                    <br></br>
                                     <input
                                           type='number'
-                                          placeholder='quantity'
+                                          placeholder='Quantity'
                                           class='input m-3 input-bordered input-error w-full max-w-xs'
                                           name='quantity'
                                           required
                                     />
+                                    <br></br>
                                     <input
                                           type='number'
-                                          placeholder='sold'
+                                          placeholder='Sold'
                                           class='input m-3 input-bordered input-error w-full max-w-xs'
                                           name='sold'
                                           required
                                     />
-                                    <button type='submit' className='btn'>
+                                    <br></br>
+                                    <button
+                                          type='submit flex content-center'
+                                          className='btn'
+                                    >
                                           Update
                                     </button>
                               </form>
