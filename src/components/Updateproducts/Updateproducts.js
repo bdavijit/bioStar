@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import useFindAdmin from '../../hook/usefindAdmin';
 import useFindProduct from '../../hook/useFindProduct';
 import useFirebase from '../../hook/useFirebase';
+import Loading from '../Loading/Loading';
 import Login2 from '../Login/Login';
 import './Updateproducts.css';
 
@@ -111,7 +112,7 @@ const Updateproducts = () => {
                                           <Login2 />
                                     </>
                               ) : (
-                                    <h1>test</h1>
+                                    <Loading />
                               )}
                         </>
                   )}

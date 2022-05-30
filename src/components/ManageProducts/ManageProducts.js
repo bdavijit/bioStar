@@ -2,6 +2,7 @@ import React from 'react';
 import useFindAdmin from '../../hook/usefindAdmin';
 import useFirebase from '../../hook/useFirebase';
 import useProduct from '../../hook/useProduct';
+import Loading from '../Loading/Loading';
 import Login2 from '../Login/Login';
 import './ManageProducts.css';
 import ManageProductsCard from './ManageProductsCard';
@@ -38,7 +39,7 @@ const ManageProducts = () => {
                                           <Login2 />
                                     </>
                               ) : (
-                                    <h1>test</h1>
+                                    <Loading />
                               )}
                         </>
                   )}

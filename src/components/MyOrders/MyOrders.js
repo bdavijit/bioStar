@@ -30,7 +30,7 @@ const MyOrders = () => {
                         </div>
                   ) : (
                         <>
-                              <h1 className='text-center'>
+                              <h1 className='text-center my-text-color text-xl'>
                                     Please login as a user
                               </h1>
                               <Login2 />

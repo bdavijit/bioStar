@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useFindAdmin from '../../hook/usefindAdmin';
 import useFirebase from '../../hook/useFirebase';
+import Loading from '../Loading/Loading';
 import Login2 from '../Login/Login';
 import './MakeAdmin.css';
 import MakeAdminCard from './MakeAdminCard';
@@ -37,7 +38,7 @@ const MakeAdmin = () => {
                                         <Login2 />
                                   </>
                             ) : (
-                                  <h1>test</h1>
+                                  <Loading />
                             )}
                       </>
                 )}

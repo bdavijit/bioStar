@@ -9,6 +9,7 @@ import WheretoBuy from './Where to Buy/WheretoBuy';
 const Home = () => {
     return (
           <div>
+
                 <Banner />
                 <BusinessSummary />
 

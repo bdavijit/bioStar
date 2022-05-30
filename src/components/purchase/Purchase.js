@@ -94,7 +94,7 @@ const Purchase = () => {
 
       return (
             <div>
-                  {user && !myUsers?.role ?(
+                  {user && !myUsers?.role ? (
                         <div>
                               <ToastContainer />
                               <div className='PurchaseCard'>
@@ -173,10 +173,12 @@ const Purchase = () => {
                               </form>
                         </div>
                   ) : (
-                     <>
-                        <h1 className='text-center'>Please login as a user</h1> 
-                        <Login2 />
-                     </>
+                        <>
+                              <h1 className='text-center my-text-color text-xl'>
+                                    Please login as a user
+                              </h1>
+                              <Login2 />
+                        </>
                   )}
             </div>
       );
