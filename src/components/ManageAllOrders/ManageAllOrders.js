@@ -6,7 +6,6 @@ const ManageAllOrders = () => {
       const [allOrder, setallOrder] = useOrder();
       return (
             <section>
-                  {allOrder?.length}
                   {allOrder?.map((Order) => (
                         <ManageAllOrdersCard
                               key={Order._id}

@@ -2,7 +2,7 @@ import React from 'react';
 import useFindAdmin from '../../hook/usefindAdmin';
 import useFirebase from '../../hook/useFirebase';
 import Login2 from '../Login/Login';
-import './ManageAllOrder.css'
+import './ManageAllOrder.css';
 
 const ManageAllOrdersCard = (props) => {
       const { user } = useFirebase();
@@ -12,6 +12,7 @@ const ManageAllOrdersCard = (props) => {
       console.log(user?.email);
       console.log(myUsers?.role);
       const {
+            _id,
             pId,
             paid,
             pName,
@@ -38,7 +39,7 @@ const ManageAllOrdersCard = (props) => {
                   Address,
                   status: state,
             };
-            const url = `https://mysterious-brook-63688.herokuapp.com/orders/${pId}`;
+            const url = `http://localhost:5001/orders/${_id}`;
             fetch(url, {
                   method: 'PUT',
                   headers: {
@@ -101,7 +102,7 @@ const ManageAllOrdersCard = (props) => {
                                                 <button
                                                       className='btn m-2 '
                                                       onClick={() =>
-                                                            DeleteOrder(pId)
+                                                            DeleteOrder(_id)
                                                       }
                                                 >
                                                       Delete
@@ -115,6 +116,7 @@ const ManageAllOrdersCard = (props) => {
                                                             'shipped'
                                                       )
                                                 }
+                                                disabled={status === 'shipped'}
                                           >
                                                 shipped
                                           </button>
