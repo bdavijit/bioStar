@@ -12,7 +12,7 @@ const ManageProducts = () => {
 
       const [myUsers, setmyUsers] = useFindAdmin(user?.email);
 
-      const [allProduct, setallProduct] = useProduct();
+      const [allProduct, setallProduct  , ProductApi, setProductApicall] = useProduct();
 
       return (
             <div>
@@ -23,6 +23,8 @@ const ManageProducts = () => {
                                           key={product._id}
                                           product={product}
                                           setallProduct={setallProduct}
+                                          ProductApi={ProductApi}
+                                          setProductApicall={setProductApicall}
                                     />
                               ))}
                         </section>

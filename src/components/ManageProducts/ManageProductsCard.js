@@ -23,12 +23,9 @@ const ManageProductsCard = (props) => {
                                .then((res) => res.json())
                                .then((data) => {
                                      if (data.deletedCount > 0) {
-                                           const remaining =
-                                                 props.product.filter(
-                                                       (products) =>
-                                                             products._id !== id
-                                                 );
-                                           props.setallProduct(remaining);
+                                       props.setProductApicall(
+                                             !props.ProductApi
+                                       );
                                      }
                                      alert('ok');
                                });
