@@ -39,7 +39,7 @@ const ManageAllOrdersCard = (props) => {
                   Address,
                   status: state,
             };
-            const url = `http://localhost:5001/orders/${_id}`;
+            const url = `https://mysterious-brook-63688.herokuapp.com/orders/${_id}`;
             fetch(url, {
                   method: 'PUT',
                   headers: {
