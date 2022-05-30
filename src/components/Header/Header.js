@@ -125,7 +125,7 @@ const Header = (props) => {
                   ) : (
                         ''
                   )}
-                  <h1 className='text-center text-2xl'>Main Menus</h1>
+                  <h1 className='text-center text-2xl mt-2'>Main Menus</h1>
                   <div className='HeaderLinks MenuBox'>
                         <Link className='Hover-border text-vw p-1' to='/'>
                               Home
@@ -145,9 +145,16 @@ const Header = (props) => {
                         <Link className='Hover-border text-vw p-1' to='/blogs'>
                               Blogs
                         </Link>
-                        <Link className='Hover-border text-vw p-1' to='/Login'>
-                              Login/Register
-                        </Link>
+                        {!user ? (
+                              <Link
+                                    className='Hover-border text-vw p-1'
+                                    to='/Login'
+                              >
+                                    Login/Register
+                              </Link>
+                        ) : (
+                              ''
+                        )}
                   </div>
             </section>
       );
